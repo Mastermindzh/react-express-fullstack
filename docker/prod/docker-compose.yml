@@ -1,0 +1,46 @@
+version: "2"
+services:
+
+  website:
+    build: ./../images/nginx
+    volumes:
+      - ./../../frontend/dist:/app
+    ports:
+      - 80:80
+
+  docs:
+    build: ./../images/nginx
+    volumes:
+      - ./../../documentation/dist:/app
+    ports:
+      - 81:80
+
+  backend:
+    build: ./../images/node
+    volumes:
+      - ./../../backend/:/app
+    ports:
+      - 4000:4000      
+
+  # sql-server:
+  #   environment:
+  #     - ACCEPT_EULA=Y
+  #     - MSSQL_SA_PASSWORD=Appelgebak123
+  #   ports:
+  #     - '1433:1433'
+  #   volumes:
+  #     - ./../../sql-data:/var/opt/mssql
+  #   image: microsoft/mssql-server-linux:2017-latest
+
+  sql-server:
+    environment:
+      - MYSQL_ROOT_PASSWORD=Appelgebak123
+      - MYSQL_DATABASE=database_development
+      - MYSQL_USER=sa
+      - MYSQL_PASSWORD=Appelgebak123
+    volumes:
+      - ./../../dbdata:/var/lib/mysql
+    ports:
+      - '3306:3306'
+    image: mysql:latest
+    

@@ -1,0 +1,9 @@
+version: "2"
+services:
+
+  website:
+    image: project/nginx-react
+    volumes:
+      - ./../../dist:/app
+    ports:
+      - 80:80

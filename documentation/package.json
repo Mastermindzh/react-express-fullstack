@@ -1,0 +1,28 @@
+{
+  "name": "sphinx-doc",
+  "version": "0.1.0",
+  "description": "sphinx doc",
+  "engines": {
+    "npm": ">=3"
+  },
+  "scripts": {
+    "postinstall": "npm run install-sphinx",
+    "install-sphinx": "make -C . install",
+    "start": "npm run open-docs",
+    "build": "npm run clean-dist && npm run build-docs",
+    "build-docs": "make-dir dist && make -C . html && ncp build/html dist/",
+    "open-docs": "make -C . run",
+    "clean-dist": "npm run remove-dist && mkdir dist",
+    "remove-dist": "rimraf ./dist"
+  },
+  "author": "Rick van Lieshout",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "make-dir-cli": "^1.0.0",
+    "ncp": "^2.0.0",
+    "node": "8.9.4",
+    "node-mv": "^0.1.3",
+    "rimraf": "2.6.1"
+  }
+}

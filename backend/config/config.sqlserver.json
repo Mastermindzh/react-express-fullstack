@@ -1,0 +1,20 @@
+{
+  "development": {
+    "username": "sa",
+    "password": "Appelgebak123",
+    "database": "database_development",
+    "host": "sql-server",
+    "port":  1433,
+    "dialect": "mssql",
+    "operatorsAliases": "Sequelize.Op"
+  },
+  "production": {
+    "username": "sa",
+    "password": "Appelgebak123",
+    "database": "database_production",
+    "host": "sql-server",
+    "port":  1433,
+    "dialect": "mssql",
+    "operatorsAliases": "Sequelize.Op"
+  }
+}

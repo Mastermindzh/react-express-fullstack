@@ -1,0 +1,9 @@
+version: "2"
+services:
+
+  website:
+    image: project/node-dev
+    volumes:
+      - ./../../:/app
+    ports:
+      - 3000:3000

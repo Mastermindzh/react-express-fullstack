@@ -1,0 +1,25 @@
+{
+  "name": "react-express-sequelize-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "start-frontend": "npm start --prefix frontend",
+    "start-backend": "npm start --prefix backend",
+    "start-docs": "npm start --prefix documentation",
+    "dev": "npm run start-frontend && npm run start-backend && npm run start-docs && npm run open-urls",
+    "docker-dev": "docker-compose -f docker/dev/docker-compose.yml up",
+    "docker-prod": "npm run docker-build-prod && docker-compose -f docker/prod/docker-compose.yml up",
+    "docker-build-prod": "docker-compose -f docker/prod/build/docker-compose.yml up",
+    "docker-rebuild": "docker-compose -f docker/dev/docker-compose.yml build && docker-compose -f docker/prod/docker-compose.yml build && docker-compose -f docker/prod/build/docker-compose.yml build",
+    "docker-fix": "docker-compose -f docker/dev/docker-compose.yml down && docker-compose -f docker/prod/docker-compose.yml down"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Rick van Lieshout",
+  "license": "ISC",
+  "dependencies": {}
+}

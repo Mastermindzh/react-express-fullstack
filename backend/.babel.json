@@ -1,0 +1,2313 @@
+{
+  "{\"filename\":\"/app/server.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "http",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "http"
+              }
+            ]
+          },
+          {
+            "source": "express",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "express"
+              }
+            ]
+          },
+          {
+            "source": "body-parser",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "bodyParser"
+              }
+            ]
+          },
+          {
+            "source": "swaggerize-express",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "swaggerize"
+              }
+            ]
+          },
+          {
+            "source": "path",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "path"
+              }
+            ]
+          },
+          {
+            "source": "cors",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "cors"
+              }
+            ]
+          },
+          {
+            "source": "./routes",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "customRoutes"
+              }
+            ]
+          },
+          {
+            "source": "./models",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "models"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server.js",
+      "filenameRelative": "/app/server.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "server.js",
+      "sourceFileName": "server.js",
+      "sourceRoot": "/app",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "server"
+    },
+    "ignored": false,
+    "code": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _http = require(\"http\");\n\nvar _http2 = _interopRequireDefault(_http);\n\nvar _express = require(\"express\");\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _bodyParser = require(\"body-parser\");\n\nvar _bodyParser2 = _interopRequireDefault(_bodyParser);\n\nvar _swaggerizeExpress = require(\"swaggerize-express\");\n\nvar _swaggerizeExpress2 = _interopRequireDefault(_swaggerizeExpress);\n\nvar _path = require(\"path\");\n\nvar _path2 = _interopRequireDefault(_path);\n\nvar _cors = require(\"cors\");\n\nvar _cors2 = _interopRequireDefault(_cors);\n\nvar _routes = require(\"./routes\");\n\nvar _routes2 = _interopRequireDefault(_routes);\n\nvar _models = require(\"./models\");\n\nvar _models2 = _interopRequireDefault(_models);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar app = (0, _express2.default)();\n\n// sequelize\n\nvar server = _http2.default.createServer(app);\n\napp.use(_bodyParser2.default.json());\napp.use(\"/\", _routes2.default);\napp.use((0, _cors2.default)());\napp.use(_bodyParser2.default.urlencoded({\n  extended: true\n}));\n\napp.use((0, _swaggerizeExpress2.default)({\n  api: _path2.default.resolve(\"./config/swagger.json\"),\n  handlers: _path2.default.resolve(\"./handlers\")\n}));\n\nserver.listen(4000, function () {\n  app.swagger.api.host = this.address().address + \":\" + this.address().port;\n  /* eslint-disable no-console */\n  console.log(\"app running on %s:%d\", this.address().address, this.address().port);\n\n  _models2.default.sequelize.sync().then(function () {\n    /* eslint-disable no-console */\n    console.log('database tables synced');\n  }).catch(function (err) {\n    /* eslint-disable no-console */\n    console.log(err);\n  });\n});\n\nexports.default = app;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlcnZlci5qcyJdLCJuYW1lcyI6WyJhcHAiLCJzZXJ2ZXIiLCJjcmVhdGVTZXJ2ZXIiLCJ1c2UiLCJqc29uIiwidXJsZW5jb2RlZCIsImV4dGVuZGVkIiwiYXBpIiwicmVzb2x2ZSIsImhhbmRsZXJzIiwibGlzdGVuIiwic3dhZ2dlciIsImhvc3QiLCJhZGRyZXNzIiwicG9ydCIsImNvbnNvbGUiLCJsb2ciLCJzZXF1ZWxpemUiLCJzeW5jIiwidGhlbiIsImNhdGNoIiwiZXJyIl0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7O0FBRUE7Ozs7QUFDQTs7OztBQUNBOzs7O0FBQ0E7Ozs7QUFDQTs7OztBQUNBOzs7O0FBRUE7Ozs7QUFHQTs7Ozs7O0FBRUEsSUFBTUEsTUFBTSx3QkFBWjs7QUFIQTs7QUFJQSxJQUFNQyxTQUFTLGVBQUtDLFlBQUwsQ0FBa0JGLEdBQWxCLENBQWY7O0FBRUFBLElBQUlHLEdBQUosQ0FBUSxxQkFBV0MsSUFBWCxFQUFSO0FBQ0FKLElBQUlHLEdBQUosQ0FBUSxHQUFSO0FBQ0FILElBQUlHLEdBQUosQ0FBUSxxQkFBUjtBQUNBSCxJQUFJRyxHQUFKLENBQ0UscUJBQVdFLFVBQVgsQ0FBc0I7QUFDcEJDLFlBQVU7QUFEVSxDQUF0QixDQURGOztBQU1BTixJQUFJRyxHQUFKLENBQ0UsaUNBQVc7QUFDVEksT0FBSyxlQUFLQyxPQUFMLENBQWEsdUJBQWIsQ0FESTtBQUVUQyxZQUFVLGVBQUtELE9BQUwsQ0FBYSxZQUFiO0FBRkQsQ0FBWCxDQURGOztBQU9BUCxPQUFPUyxNQUFQLENBQWMsSUFBZCxFQUFvQixZQUFXO0FBQzdCVixNQUFJVyxPQUFKLENBQVlKLEdBQVosQ0FBZ0JLLElBQWhCLEdBQXVCLEtBQUtDLE9BQUwsR0FBZUEsT0FBZixHQUF5QixHQUF6QixHQUErQixLQUFLQSxPQUFMLEdBQWVDLElBQXJFO0FBQ0E7QUFDQUMsVUFBUUMsR0FBUixDQUNFLHNCQURGLEVBRUUsS0FBS0gsT0FBTCxHQUFlQSxPQUZqQixFQUdFLEtBQUtBLE9BQUwsR0FBZUMsSUFIakI7O0FBTUEsbUJBQU9HLFNBQVAsQ0FBaUJDLElBQWpCLEdBQXdCQyxJQUF4QixDQUE2QixZQUFXO0FBQ3RDO0FBQ0FKLFlBQVFDLEdBQVIsQ0FBWSx3QkFBWjtBQUNELEdBSEQsRUFHR0ksS0FISCxDQUdTLGVBQU87QUFDZDtBQUNBTCxZQUFRQyxHQUFSLENBQVlLLEdBQVo7QUFDRCxHQU5EO0FBUUQsQ0FqQkQ7O2tCQW1CZXJCLEciLCJmaWxlIjoic2VydmVyLmpzIiwic291cmNlUm9vdCI6Ii9hcHAiLCJzb3VyY2VzQ29udGVudCI6WyJcInVzZSBzdHJpY3RcIjtcblxuaW1wb3J0IGh0dHAgZnJvbSBcImh0dHBcIjtcbmltcG9ydCBleHByZXNzIGZyb20gXCJleHByZXNzXCI7XG5pbXBvcnQgYm9keVBhcnNlciBmcm9tIFwiYm9keS1wYXJzZXJcIjtcbmltcG9ydCBzd2FnZ2VyaXplIGZyb20gXCJzd2FnZ2VyaXplLWV4cHJlc3NcIjtcbmltcG9ydCBwYXRoIGZyb20gXCJwYXRoXCI7XG5pbXBvcnQgY29ycyBmcm9tIFwiY29yc1wiO1xuXG5pbXBvcnQgY3VzdG9tUm91dGVzIGZyb20gXCIuL3JvdXRlc1wiO1xuXG4vLyBzZXF1ZWxpemVcbmltcG9ydCBtb2RlbHMgZnJvbSBcIi4vbW9kZWxzXCI7XG5cbmNvbnN0IGFwcCA9IGV4cHJlc3MoKTtcbmNvbnN0IHNlcnZlciA9IGh0dHAuY3JlYXRlU2VydmVyKGFwcCk7XG5cbmFwcC51c2UoYm9keVBhcnNlci5qc29uKCkpO1xuYXBwLnVzZShcIi9cIiwgY3VzdG9tUm91dGVzKTtcbmFwcC51c2UoY29ycygpKTtcbmFwcC51c2UoXG4gIGJvZHlQYXJzZXIudXJsZW5jb2RlZCh7XG4gICAgZXh0ZW5kZWQ6IHRydWVcbiAgfSlcbik7XG5cbmFwcC51c2UoXG4gIHN3YWdnZXJpemUoe1xuICAgIGFwaTogcGF0aC5yZXNvbHZlKFwiLi9jb25maWcvc3dhZ2dlci5qc29uXCIpLFxuICAgIGhhbmRsZXJzOiBwYXRoLnJlc29sdmUoXCIuL2hhbmRsZXJzXCIpXG4gIH0pXG4pO1xuXG5zZXJ2ZXIubGlzdGVuKDQwMDAsIGZ1bmN0aW9uKCkge1xuICBhcHAuc3dhZ2dlci5hcGkuaG9zdCA9IHRoaXMuYWRkcmVzcygpLmFkZHJlc3MgKyBcIjpcIiArIHRoaXMuYWRkcmVzcygpLnBvcnQ7XG4gIC8qIGVzbGludC1kaXNhYmxlIG5vLWNvbnNvbGUgKi9cbiAgY29uc29sZS5sb2coXG4gICAgXCJhcHAgcnVubmluZyBvbiAlczolZFwiLFxuICAgIHRoaXMuYWRkcmVzcygpLmFkZHJlc3MsXG4gICAgdGhpcy5hZGRyZXNzKCkucG9ydFxuICApO1xuXG4gIG1vZGVscy5zZXF1ZWxpemUuc3luYygpLnRoZW4oZnVuY3Rpb24oKSB7XG4gICAgLyogZXNsaW50LWRpc2FibGUgbm8tY29uc29sZSAqL1xuICAgIGNvbnNvbGUubG9nKCdkYXRhYmFzZSB0YWJsZXMgc3luY2VkJylcbiAgfSkuY2F0Y2goZXJyID0+IHtcbiAgICAvKiBlc2xpbnQtZGlzYWJsZSBuby1jb25zb2xlICovXG4gICAgY29uc29sZS5sb2coZXJyKTtcbiAgfSk7XG5cbn0pO1xuXG5leHBvcnQgZGVmYXVsdCBhcHA7XG4iXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "server.js"
+      ],
+      "names": [
+        "app",
+        "server",
+        "createServer",
+        "use",
+        "json",
+        "urlencoded",
+        "extended",
+        "api",
+        "resolve",
+        "handlers",
+        "listen",
+        "swagger",
+        "host",
+        "address",
+        "port",
+        "console",
+        "log",
+        "sequelize",
+        "sync",
+        "then",
+        "catch",
+        "err"
+      ],
+      "mappings": "AAAA;;;;;;AAEA;;;;AACA;;;;AACA;;;;AACA;;;;AACA;;;;AACA;;;;AAEA;;;;AAGA;;;;;;AAEA,IAAMA,MAAM,wBAAZ;;AAHA;;AAIA,IAAMC,SAAS,eAAKC,YAAL,CAAkBF,GAAlB,CAAf;;AAEAA,IAAIG,GAAJ,CAAQ,qBAAWC,IAAX,EAAR;AACAJ,IAAIG,GAAJ,CAAQ,GAAR;AACAH,IAAIG,GAAJ,CAAQ,qBAAR;AACAH,IAAIG,GAAJ,CACE,qBAAWE,UAAX,CAAsB;AACpBC,YAAU;AADU,CAAtB,CADF;;AAMAN,IAAIG,GAAJ,CACE,iCAAW;AACTI,OAAK,eAAKC,OAAL,CAAa,uBAAb,CADI;AAETC,YAAU,eAAKD,OAAL,CAAa,YAAb;AAFD,CAAX,CADF;;AAOAP,OAAOS,MAAP,CAAc,IAAd,EAAoB,YAAW;AAC7BV,MAAIW,OAAJ,CAAYJ,GAAZ,CAAgBK,IAAhB,GAAuB,KAAKC,OAAL,GAAeA,OAAf,GAAyB,GAAzB,GAA+B,KAAKA,OAAL,GAAeC,IAArE;AACA;AACAC,UAAQC,GAAR,CACE,sBADF,EAEE,KAAKH,OAAL,GAAeA,OAFjB,EAGE,KAAKA,OAAL,GAAeC,IAHjB;;AAMA,mBAAOG,SAAP,CAAiBC,IAAjB,GAAwBC,IAAxB,CAA6B,YAAW;AACtC;AACAJ,YAAQC,GAAR,CAAY,wBAAZ;AACD,GAHD,EAGGI,KAHH,CAGS,eAAO;AACd;AACAL,YAAQC,GAAR,CAAYK,GAAZ;AACD,GAND;AAQD,CAjBD;;kBAmBerB,G",
+      "file": "server.js",
+      "sourceRoot": "/app",
+      "sourcesContent": [
+        "\"use strict\";\n\nimport http from \"http\";\nimport express from \"express\";\nimport bodyParser from \"body-parser\";\nimport swaggerize from \"swaggerize-express\";\nimport path from \"path\";\nimport cors from \"cors\";\n\nimport customRoutes from \"./routes\";\n\n// sequelize\nimport models from \"./models\";\n\nconst app = express();\nconst server = http.createServer(app);\n\napp.use(bodyParser.json());\napp.use(\"/\", customRoutes);\napp.use(cors());\napp.use(\n  bodyParser.urlencoded({\n    extended: true\n  })\n);\n\napp.use(\n  swaggerize({\n    api: path.resolve(\"./config/swagger.json\"),\n    handlers: path.resolve(\"./handlers\")\n  })\n);\n\nserver.listen(4000, function() {\n  app.swagger.api.host = this.address().address + \":\" + this.address().port;\n  /* eslint-disable no-console */\n  console.log(\n    \"app running on %s:%d\",\n    this.address().address,\n    this.address().port\n  );\n\n  models.sequelize.sync().then(function() {\n    /* eslint-disable no-console */\n    console.log('database tables synced')\n  }).catch(err => {\n    /* eslint-disable no-console */\n    console.log(err);\n  });\n\n});\n\nexport default app;\n"
+      ]
+    },
+    "mtime": 1521802894137
+  },
+  "{\"filename\":\"/app/routes/index.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/routes\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "swagger-ui-express",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "swaggerUi"
+              }
+            ]
+          },
+          {
+            "source": "./../config/swagger.json",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "swaggerDocument"
+              }
+            ]
+          },
+          {
+            "source": "express",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "express"
+              }
+            ]
+          },
+          {
+            "source": "./../package.json",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "packageJson"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/routes/index.js",
+      "filenameRelative": "/app/routes/index.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "index.js",
+      "sourceFileName": "index.js",
+      "sourceRoot": "/app/routes",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/routes",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "index"
+    },
+    "ignored": false,
+    "code": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _swaggerUiExpress = require(\"swagger-ui-express\");\n\nvar _swaggerUiExpress2 = _interopRequireDefault(_swaggerUiExpress);\n\nvar _swagger = require(\"./../config/swagger.json\");\n\nvar _swagger2 = _interopRequireDefault(_swagger);\n\nvar _express = require(\"express\");\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _package = require(\"./../package.json\");\n\nvar _package2 = _interopRequireDefault(_package);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar router = _express2.default.Router();\n\n// add base path\nrouter.get(\"/\", function (req, res) {\n  res.json({\n    name: _package2.default.name,\n    version: _package2.default.version,\n    author: _package2.default.author,\n    documentation: req.protocol + \"://\" + req.get(\"host\") + req.originalUrl + \"docs\"\n  });\n});\n\n// add swagger router\nrouter.use(\"/docs\", _swaggerUiExpress2.default.serve, _swaggerUiExpress2.default.setup(_swagger2.default));\n\nexports.default = router;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbInJvdXRlciIsIlJvdXRlciIsImdldCIsInJlcSIsInJlcyIsImpzb24iLCJuYW1lIiwidmVyc2lvbiIsImF1dGhvciIsImRvY3VtZW50YXRpb24iLCJwcm90b2NvbCIsIm9yaWdpbmFsVXJsIiwidXNlIiwic2VydmUiLCJzZXR1cCJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUE7Ozs7QUFDQTs7OztBQUNBOzs7O0FBQ0E7Ozs7OztBQUNBLElBQUlBLFNBQVMsa0JBQVFDLE1BQVIsRUFBYjs7QUFFQTtBQUNBRCxPQUFPRSxHQUFQLENBQVcsR0FBWCxFQUFnQixVQUFDQyxHQUFELEVBQU1DLEdBQU4sRUFBYztBQUM1QkEsTUFBSUMsSUFBSixDQUFTO0FBQ1BDLFVBQU0sa0JBQVlBLElBRFg7QUFFUEMsYUFBUyxrQkFBWUEsT0FGZDtBQUdQQyxZQUFRLGtCQUFZQSxNQUhiO0FBSVBDLG1CQUFrQk4sSUFBSU8sUUFBdEIsV0FBb0NQLElBQUlELEdBQUosQ0FBUSxNQUFSLENBQXBDLEdBQXNEQyxJQUFJUSxXQUExRDtBQUpPLEdBQVQ7QUFNRCxDQVBEOztBQVNBO0FBQ0FYLE9BQU9ZLEdBQVAsQ0FBVyxPQUFYLEVBQW9CLDJCQUFVQyxLQUE5QixFQUFxQywyQkFBVUMsS0FBVixtQkFBckM7O2tCQUVlZCxNIiwiZmlsZSI6ImluZGV4LmpzIiwic291cmNlUm9vdCI6Ii9hcHAvcm91dGVzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHN3YWdnZXJVaSBmcm9tIFwic3dhZ2dlci11aS1leHByZXNzXCI7XG5pbXBvcnQgc3dhZ2dlckRvY3VtZW50IGZyb20gXCIuLy4uL2NvbmZpZy9zd2FnZ2VyLmpzb25cIjtcbmltcG9ydCBleHByZXNzIGZyb20gXCJleHByZXNzXCI7XG5pbXBvcnQgcGFja2FnZUpzb24gZnJvbSBcIi4vLi4vcGFja2FnZS5qc29uXCI7XG5sZXQgcm91dGVyID0gZXhwcmVzcy5Sb3V0ZXIoKTtcblxuLy8gYWRkIGJhc2UgcGF0aFxucm91dGVyLmdldChcIi9cIiwgKHJlcSwgcmVzKSA9PiB7XG4gIHJlcy5qc29uKHtcbiAgICBuYW1lOiBwYWNrYWdlSnNvbi5uYW1lLFxuICAgIHZlcnNpb246IHBhY2thZ2VKc29uLnZlcnNpb24sXG4gICAgYXV0aG9yOiBwYWNrYWdlSnNvbi5hdXRob3IsXG4gICAgZG9jdW1lbnRhdGlvbjogYCR7cmVxLnByb3RvY29sfTovLyR7cmVxLmdldChcImhvc3RcIil9JHtyZXEub3JpZ2luYWxVcmx9ZG9jc2BcbiAgfSk7XG59KTtcblxuLy8gYWRkIHN3YWdnZXIgcm91dGVyXG5yb3V0ZXIudXNlKFwiL2RvY3NcIiwgc3dhZ2dlclVpLnNlcnZlLCBzd2FnZ2VyVWkuc2V0dXAoc3dhZ2dlckRvY3VtZW50KSk7XG5cbmV4cG9ydCBkZWZhdWx0IHJvdXRlcjtcbiJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "index.js"
+      ],
+      "names": [
+        "router",
+        "Router",
+        "get",
+        "req",
+        "res",
+        "json",
+        "name",
+        "version",
+        "author",
+        "documentation",
+        "protocol",
+        "originalUrl",
+        "use",
+        "serve",
+        "setup"
+      ],
+      "mappings": ";;;;;;AAAA;;;;AACA;;;;AACA;;;;AACA;;;;;;AACA,IAAIA,SAAS,kBAAQC,MAAR,EAAb;;AAEA;AACAD,OAAOE,GAAP,CAAW,GAAX,EAAgB,UAACC,GAAD,EAAMC,GAAN,EAAc;AAC5BA,MAAIC,IAAJ,CAAS;AACPC,UAAM,kBAAYA,IADX;AAEPC,aAAS,kBAAYA,OAFd;AAGPC,YAAQ,kBAAYA,MAHb;AAIPC,mBAAkBN,IAAIO,QAAtB,WAAoCP,IAAID,GAAJ,CAAQ,MAAR,CAApC,GAAsDC,IAAIQ,WAA1D;AAJO,GAAT;AAMD,CAPD;;AASA;AACAX,OAAOY,GAAP,CAAW,OAAX,EAAoB,2BAAUC,KAA9B,EAAqC,2BAAUC,KAAV,mBAArC;;kBAEed,M",
+      "file": "index.js",
+      "sourceRoot": "/app/routes",
+      "sourcesContent": [
+        "import swaggerUi from \"swagger-ui-express\";\nimport swaggerDocument from \"./../config/swagger.json\";\nimport express from \"express\";\nimport packageJson from \"./../package.json\";\nlet router = express.Router();\n\n// add base path\nrouter.get(\"/\", (req, res) => {\n  res.json({\n    name: packageJson.name,\n    version: packageJson.version,\n    author: packageJson.author,\n    documentation: `${req.protocol}://${req.get(\"host\")}${req.originalUrl}docs`\n  });\n});\n\n// add swagger router\nrouter.use(\"/docs\", swaggerUi.serve, swaggerUi.setup(swaggerDocument));\n\nexport default router;\n"
+      ]
+    },
+    "mtime": 1521803612510
+  },
+  "{\"filename\":\"/app/models/index.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/models\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [
+            "config"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "config",
+              "exported": "config"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/models/index.js",
+      "filenameRelative": "/app/models/index.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "index.js",
+      "sourceFileName": "index.js",
+      "sourceRoot": "/app/models",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/models",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "index"
+    },
+    "ignored": false,
+    "code": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar fs = require(\"fs\");\nvar path = require(\"path\");\nvar Sequelize = require(\"sequelize\");\nvar basename = path.basename(__filename);\nvar env = process.env.NODE_ENV || \"development\";\nvar config = require(__dirname + \"/../config/config.json\")[env];\nvar db = {};\n\nvar sequelize = void 0;\n\nif (config.use_env_variable) {\n  sequelize = new Sequelize(process.env[config.use_env_variable], config);\n} else {\n  sequelize = new Sequelize(config.database, config.username, config.password, config);\n}\n\nfs.readdirSync(__dirname).filter(function (file) {\n  return file.indexOf(\".\") !== 0 && file !== basename && file.slice(-3) === \".js\";\n}).forEach(function (file) {\n  var model = sequelize[\"import\"](path.join(__dirname, file));\n  db[model.name] = model;\n});\n\nObject.keys(db).forEach(function (modelName) {\n  if (db[modelName].associate) {\n    db[modelName].associate(db);\n  }\n});\n\ndb.sequelize = sequelize;\ndb.Sequelize = Sequelize;\n\nexports.config = config;\nexports.default = db;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbImZzIiwicmVxdWlyZSIsInBhdGgiLCJTZXF1ZWxpemUiLCJiYXNlbmFtZSIsIl9fZmlsZW5hbWUiLCJlbnYiLCJwcm9jZXNzIiwiTk9ERV9FTlYiLCJjb25maWciLCJfX2Rpcm5hbWUiLCJkYiIsInNlcXVlbGl6ZSIsInVzZV9lbnZfdmFyaWFibGUiLCJkYXRhYmFzZSIsInVzZXJuYW1lIiwicGFzc3dvcmQiLCJyZWFkZGlyU3luYyIsImZpbHRlciIsImZpbGUiLCJpbmRleE9mIiwic2xpY2UiLCJmb3JFYWNoIiwibW9kZWwiLCJqb2luIiwibmFtZSIsIk9iamVjdCIsImtleXMiLCJtb2RlbE5hbWUiLCJhc3NvY2lhdGUiXSwibWFwcGluZ3MiOiJBQUFBOzs7OztBQUVBLElBQUlBLEtBQUtDLFFBQVEsSUFBUixDQUFUO0FBQ0EsSUFBSUMsT0FBT0QsUUFBUSxNQUFSLENBQVg7QUFDQSxJQUFJRSxZQUFZRixRQUFRLFdBQVIsQ0FBaEI7QUFDQSxJQUFJRyxXQUFXRixLQUFLRSxRQUFMLENBQWNDLFVBQWQsQ0FBZjtBQUNBLElBQUlDLE1BQU1DLFFBQVFELEdBQVIsQ0FBWUUsUUFBWixJQUF3QixhQUFsQztBQUNBLElBQUlDLFNBQVNSLFFBQVFTLFlBQVksd0JBQXBCLEVBQThDSixHQUE5QyxDQUFiO0FBQ0EsSUFBSUssS0FBSyxFQUFUOztBQUVBLElBQUlDLGtCQUFKOztBQUVBLElBQUlILE9BQU9JLGdCQUFYLEVBQTZCO0FBQzNCRCxjQUFZLElBQUlULFNBQUosQ0FBY0ksUUFBUUQsR0FBUixDQUFZRyxPQUFPSSxnQkFBbkIsQ0FBZCxFQUFvREosTUFBcEQsQ0FBWjtBQUNELENBRkQsTUFFTztBQUNMRyxjQUFZLElBQUlULFNBQUosQ0FDVk0sT0FBT0ssUUFERyxFQUVWTCxPQUFPTSxRQUZHLEVBR1ZOLE9BQU9PLFFBSEcsRUFJVlAsTUFKVSxDQUFaO0FBTUQ7O0FBRURULEdBQ0dpQixXQURILENBQ2VQLFNBRGYsRUFFR1EsTUFGSCxDQUVVLGdCQUFRO0FBQ2QsU0FDRUMsS0FBS0MsT0FBTCxDQUFhLEdBQWIsTUFBc0IsQ0FBdEIsSUFBMkJELFNBQVNmLFFBQXBDLElBQWdEZSxLQUFLRSxLQUFMLENBQVcsQ0FBQyxDQUFaLE1BQW1CLEtBRHJFO0FBR0QsQ0FOSCxFQU9HQyxPQVBILENBT1csZ0JBQVE7QUFDZixNQUFJQyxRQUFRWCxVQUFVLFFBQVYsRUFBb0JWLEtBQUtzQixJQUFMLENBQVVkLFNBQVYsRUFBcUJTLElBQXJCLENBQXBCLENBQVo7QUFDQVIsS0FBR1ksTUFBTUUsSUFBVCxJQUFpQkYsS0FBakI7QUFDRCxDQVZIOztBQVlBRyxPQUFPQyxJQUFQLENBQVloQixFQUFaLEVBQWdCVyxPQUFoQixDQUF3QixxQkFBYTtBQUNuQyxNQUFJWCxHQUFHaUIsU0FBSCxFQUFjQyxTQUFsQixFQUE2QjtBQUMzQmxCLE9BQUdpQixTQUFILEVBQWNDLFNBQWQsQ0FBd0JsQixFQUF4QjtBQUNEO0FBQ0YsQ0FKRDs7QUFNQUEsR0FBR0MsU0FBSCxHQUFlQSxTQUFmO0FBQ0FELEdBQUdSLFNBQUgsR0FBZUEsU0FBZjs7UUFFU00sTSxHQUFBQSxNO2tCQUNNRSxFIiwiZmlsZSI6ImluZGV4LmpzIiwic291cmNlUm9vdCI6Ii9hcHAvbW9kZWxzIiwic291cmNlc0NvbnRlbnQiOlsiXCJ1c2Ugc3RyaWN0XCI7XG5cbnZhciBmcyA9IHJlcXVpcmUoXCJmc1wiKTtcbnZhciBwYXRoID0gcmVxdWlyZShcInBhdGhcIik7XG52YXIgU2VxdWVsaXplID0gcmVxdWlyZShcInNlcXVlbGl6ZVwiKTtcbnZhciBiYXNlbmFtZSA9IHBhdGguYmFzZW5hbWUoX19maWxlbmFtZSk7XG52YXIgZW52ID0gcHJvY2Vzcy5lbnYuTk9ERV9FTlYgfHwgXCJkZXZlbG9wbWVudFwiO1xudmFyIGNvbmZpZyA9IHJlcXVpcmUoX19kaXJuYW1lICsgXCIvLi4vY29uZmlnL2NvbmZpZy5qc29uXCIpW2Vudl07XG52YXIgZGIgPSB7fTtcblxubGV0IHNlcXVlbGl6ZTtcblxuaWYgKGNvbmZpZy51c2VfZW52X3ZhcmlhYmxlKSB7XG4gIHNlcXVlbGl6ZSA9IG5ldyBTZXF1ZWxpemUocHJvY2Vzcy5lbnZbY29uZmlnLnVzZV9lbnZfdmFyaWFibGVdLCBjb25maWcpO1xufSBlbHNlIHtcbiAgc2VxdWVsaXplID0gbmV3IFNlcXVlbGl6ZShcbiAgICBjb25maWcuZGF0YWJhc2UsXG4gICAgY29uZmlnLnVzZXJuYW1lLFxuICAgIGNvbmZpZy5wYXNzd29yZCxcbiAgICBjb25maWdcbiAgKTtcbn1cblxuZnNcbiAgLnJlYWRkaXJTeW5jKF9fZGlybmFtZSlcbiAgLmZpbHRlcihmaWxlID0+IHtcbiAgICByZXR1cm4gKFxuICAgICAgZmlsZS5pbmRleE9mKFwiLlwiKSAhPT0gMCAmJiBmaWxlICE9PSBiYXNlbmFtZSAmJiBmaWxlLnNsaWNlKC0zKSA9PT0gXCIuanNcIlxuICAgICk7XG4gIH0pXG4gIC5mb3JFYWNoKGZpbGUgPT4ge1xuICAgIHZhciBtb2RlbCA9IHNlcXVlbGl6ZVtcImltcG9ydFwiXShwYXRoLmpvaW4oX19kaXJuYW1lLCBmaWxlKSk7XG4gICAgZGJbbW9kZWwubmFtZV0gPSBtb2RlbDtcbiAgfSk7XG5cbk9iamVjdC5rZXlzKGRiKS5mb3JFYWNoKG1vZGVsTmFtZSA9PiB7XG4gIGlmIChkYlttb2RlbE5hbWVdLmFzc29jaWF0ZSkge1xuICAgIGRiW21vZGVsTmFtZV0uYXNzb2NpYXRlKGRiKTtcbiAgfVxufSk7XG5cbmRiLnNlcXVlbGl6ZSA9IHNlcXVlbGl6ZTtcbmRiLlNlcXVlbGl6ZSA9IFNlcXVlbGl6ZTtcblxuZXhwb3J0IHsgY29uZmlnIH07XG5leHBvcnQgZGVmYXVsdCBkYjtcblxuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "index.js"
+      ],
+      "names": [
+        "fs",
+        "require",
+        "path",
+        "Sequelize",
+        "basename",
+        "__filename",
+        "env",
+        "process",
+        "NODE_ENV",
+        "config",
+        "__dirname",
+        "db",
+        "sequelize",
+        "use_env_variable",
+        "database",
+        "username",
+        "password",
+        "readdirSync",
+        "filter",
+        "file",
+        "indexOf",
+        "slice",
+        "forEach",
+        "model",
+        "join",
+        "name",
+        "Object",
+        "keys",
+        "modelName",
+        "associate"
+      ],
+      "mappings": "AAAA;;;;;AAEA,IAAIA,KAAKC,QAAQ,IAAR,CAAT;AACA,IAAIC,OAAOD,QAAQ,MAAR,CAAX;AACA,IAAIE,YAAYF,QAAQ,WAAR,CAAhB;AACA,IAAIG,WAAWF,KAAKE,QAAL,CAAcC,UAAd,CAAf;AACA,IAAIC,MAAMC,QAAQD,GAAR,CAAYE,QAAZ,IAAwB,aAAlC;AACA,IAAIC,SAASR,QAAQS,YAAY,wBAApB,EAA8CJ,GAA9C,CAAb;AACA,IAAIK,KAAK,EAAT;;AAEA,IAAIC,kBAAJ;;AAEA,IAAIH,OAAOI,gBAAX,EAA6B;AAC3BD,cAAY,IAAIT,SAAJ,CAAcI,QAAQD,GAAR,CAAYG,OAAOI,gBAAnB,CAAd,EAAoDJ,MAApD,CAAZ;AACD,CAFD,MAEO;AACLG,cAAY,IAAIT,SAAJ,CACVM,OAAOK,QADG,EAEVL,OAAOM,QAFG,EAGVN,OAAOO,QAHG,EAIVP,MAJU,CAAZ;AAMD;;AAEDT,GACGiB,WADH,CACeP,SADf,EAEGQ,MAFH,CAEU,gBAAQ;AACd,SACEC,KAAKC,OAAL,CAAa,GAAb,MAAsB,CAAtB,IAA2BD,SAASf,QAApC,IAAgDe,KAAKE,KAAL,CAAW,CAAC,CAAZ,MAAmB,KADrE;AAGD,CANH,EAOGC,OAPH,CAOW,gBAAQ;AACf,MAAIC,QAAQX,UAAU,QAAV,EAAoBV,KAAKsB,IAAL,CAAUd,SAAV,EAAqBS,IAArB,CAApB,CAAZ;AACAR,KAAGY,MAAME,IAAT,IAAiBF,KAAjB;AACD,CAVH;;AAYAG,OAAOC,IAAP,CAAYhB,EAAZ,EAAgBW,OAAhB,CAAwB,qBAAa;AACnC,MAAIX,GAAGiB,SAAH,EAAcC,SAAlB,EAA6B;AAC3BlB,OAAGiB,SAAH,EAAcC,SAAd,CAAwBlB,EAAxB;AACD;AACF,CAJD;;AAMAA,GAAGC,SAAH,GAAeA,SAAf;AACAD,GAAGR,SAAH,GAAeA,SAAf;;QAESM,M,GAAAA,M;kBACME,E",
+      "file": "index.js",
+      "sourceRoot": "/app/models",
+      "sourcesContent": [
+        "\"use strict\";\n\nvar fs = require(\"fs\");\nvar path = require(\"path\");\nvar Sequelize = require(\"sequelize\");\nvar basename = path.basename(__filename);\nvar env = process.env.NODE_ENV || \"development\";\nvar config = require(__dirname + \"/../config/config.json\")[env];\nvar db = {};\n\nlet sequelize;\n\nif (config.use_env_variable) {\n  sequelize = new Sequelize(process.env[config.use_env_variable], config);\n} else {\n  sequelize = new Sequelize(\n    config.database,\n    config.username,\n    config.password,\n    config\n  );\n}\n\nfs\n  .readdirSync(__dirname)\n  .filter(file => {\n    return (\n      file.indexOf(\".\") !== 0 && file !== basename && file.slice(-3) === \".js\"\n    );\n  })\n  .forEach(file => {\n    var model = sequelize[\"import\"](path.join(__dirname, file));\n    db[model.name] = model;\n  });\n\nObject.keys(db).forEach(modelName => {\n  if (db[modelName].associate) {\n    db[modelName].associate(db);\n  }\n});\n\ndb.sequelize = sequelize;\ndb.Sequelize = Sequelize;\n\nexport { config };\nexport default db;\n\n"
+      ]
+    },
+    "mtime": 1521747609000
+  },
+  "{\"filename\":\"/app/models/dashboard.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/models\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/models/dashboard.js",
+      "filenameRelative": "/app/models/dashboard.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "dashboard.js",
+      "sourceFileName": "dashboard.js",
+      "sourceRoot": "/app/models",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/models",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "dashboard"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nmodule.exports = function (sequelize, DataTypes) {\n  var Dashboard = sequelize.define('Dashboard', {\n    name: DataTypes.STRING\n  }, {});\n  Dashboard.associate = function (models) {\n    // associations can be defined here\n  };\n  return Dashboard;\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRhc2hib2FyZC5qcyJdLCJuYW1lcyI6WyJtb2R1bGUiLCJleHBvcnRzIiwic2VxdWVsaXplIiwiRGF0YVR5cGVzIiwiRGFzaGJvYXJkIiwiZGVmaW5lIiwibmFtZSIsIlNUUklORyIsImFzc29jaWF0ZSIsIm1vZGVscyJdLCJtYXBwaW5ncyI6IkFBQUE7O0FBQ0FBLE9BQU9DLE9BQVAsR0FBaUIsVUFBQ0MsU0FBRCxFQUFZQyxTQUFaLEVBQTBCO0FBQ3pDLE1BQUlDLFlBQVlGLFVBQVVHLE1BQVYsQ0FBaUIsV0FBakIsRUFBOEI7QUFDNUNDLFVBQU1ILFVBQVVJO0FBRDRCLEdBQTlCLEVBRWIsRUFGYSxDQUFoQjtBQUdBSCxZQUFVSSxTQUFWLEdBQXNCLFVBQVNDLE1BQVQsRUFBaUI7QUFDckM7QUFDRCxHQUZEO0FBR0EsU0FBT0wsU0FBUDtBQUNELENBUkQiLCJmaWxlIjoiZGFzaGJvYXJkLmpzIiwic291cmNlUm9vdCI6Ii9hcHAvbW9kZWxzIiwic291cmNlc0NvbnRlbnQiOlsiJ3VzZSBzdHJpY3QnO1xubW9kdWxlLmV4cG9ydHMgPSAoc2VxdWVsaXplLCBEYXRhVHlwZXMpID0+IHtcbiAgdmFyIERhc2hib2FyZCA9IHNlcXVlbGl6ZS5kZWZpbmUoJ0Rhc2hib2FyZCcsIHtcbiAgICBuYW1lOiBEYXRhVHlwZXMuU1RSSU5HXG4gIH0sIHt9KTtcbiAgRGFzaGJvYXJkLmFzc29jaWF0ZSA9IGZ1bmN0aW9uKG1vZGVscykge1xuICAgIC8vIGFzc29jaWF0aW9ucyBjYW4gYmUgZGVmaW5lZCBoZXJlXG4gIH07XG4gIHJldHVybiBEYXNoYm9hcmQ7XG59OyJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "dashboard.js"
+      ],
+      "names": [
+        "module",
+        "exports",
+        "sequelize",
+        "DataTypes",
+        "Dashboard",
+        "define",
+        "name",
+        "STRING",
+        "associate",
+        "models"
+      ],
+      "mappings": "AAAA;;AACAA,OAAOC,OAAP,GAAiB,UAACC,SAAD,EAAYC,SAAZ,EAA0B;AACzC,MAAIC,YAAYF,UAAUG,MAAV,CAAiB,WAAjB,EAA8B;AAC5CC,UAAMH,UAAUI;AAD4B,GAA9B,EAEb,EAFa,CAAhB;AAGAH,YAAUI,SAAV,GAAsB,UAASC,MAAT,EAAiB;AACrC;AACD,GAFD;AAGA,SAAOL,SAAP;AACD,CARD",
+      "file": "dashboard.js",
+      "sourceRoot": "/app/models",
+      "sourcesContent": [
+        "'use strict';\nmodule.exports = (sequelize, DataTypes) => {\n  var Dashboard = sequelize.define('Dashboard', {\n    name: DataTypes.STRING\n  }, {});\n  Dashboard.associate = function(models) {\n    // associations can be defined here\n  };\n  return Dashboard;\n};"
+      ]
+    },
+    "mtime": 1521730800000
+  },
+  "{\"filename\":\"/app/handlers/dashboards/{id}.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/handlers/dashboards\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/handlers/dashboards/{id}.js",
+      "filenameRelative": "/app/handlers/dashboards/{id}.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "{id}.js",
+      "sourceFileName": "{id}.js",
+      "sourceRoot": "/app/handlers/dashboards",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/handlers/dashboards",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "{id}"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar dataProvider = require('../../data/dashboards/{id}.js');\n/**\n * Operations on /dashboards/{id}\n */\nmodule.exports = {\n    /**\n     * summary: Get a specific dashboards by id\n     * description: Get a specific dashboards by id\n     * parameters: id\n     * produces: application/json\n     * responses: 200\n     */\n    get: function getDashboardById(req, res, next) {\n        /**\n         * Get the data for response 200\n         * For response `default` status 200 is used.\n         */\n        var status = 200;\n        var provider = dataProvider['get']['200'];\n        provider(req, res, function (err, data) {\n            if (err) {\n                next(err);\n                return;\n            }\n            res.status(status).send(data && data.responses);\n        });\n    }\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIntpZH0uanMiXSwibmFtZXMiOlsiZGF0YVByb3ZpZGVyIiwicmVxdWlyZSIsIm1vZHVsZSIsImV4cG9ydHMiLCJnZXQiLCJnZXREYXNoYm9hcmRCeUlkIiwicmVxIiwicmVzIiwibmV4dCIsInN0YXR1cyIsInByb3ZpZGVyIiwiZXJyIiwiZGF0YSIsInNlbmQiLCJyZXNwb25zZXMiXSwibWFwcGluZ3MiOiJBQUFBOztBQUNBLElBQUlBLGVBQWVDLFFBQVEsK0JBQVIsQ0FBbkI7QUFDQTs7O0FBR0FDLE9BQU9DLE9BQVAsR0FBaUI7QUFDYjs7Ozs7OztBQU9BQyxTQUFLLFNBQVNDLGdCQUFULENBQTBCQyxHQUExQixFQUErQkMsR0FBL0IsRUFBb0NDLElBQXBDLEVBQTBDO0FBQzNDOzs7O0FBSUEsWUFBSUMsU0FBUyxHQUFiO0FBQ0EsWUFBSUMsV0FBV1YsYUFBYSxLQUFiLEVBQW9CLEtBQXBCLENBQWY7QUFDQVUsaUJBQVNKLEdBQVQsRUFBY0MsR0FBZCxFQUFtQixVQUFVSSxHQUFWLEVBQWVDLElBQWYsRUFBcUI7QUFDcEMsZ0JBQUlELEdBQUosRUFBUztBQUNMSCxxQkFBS0csR0FBTDtBQUNBO0FBQ0g7QUFDREosZ0JBQUlFLE1BQUosQ0FBV0EsTUFBWCxFQUFtQkksSUFBbkIsQ0FBd0JELFFBQVFBLEtBQUtFLFNBQXJDO0FBQ0gsU0FORDtBQU9IO0FBdEJZLENBQWpCIiwiZmlsZSI6IntpZH0uanMiLCJzb3VyY2VSb290IjoiL2FwcC9oYW5kbGVycy9kYXNoYm9hcmRzIiwic291cmNlc0NvbnRlbnQiOlsiJ3VzZSBzdHJpY3QnO1xudmFyIGRhdGFQcm92aWRlciA9IHJlcXVpcmUoJy4uLy4uL2RhdGEvZGFzaGJvYXJkcy97aWR9LmpzJyk7XG4vKipcbiAqIE9wZXJhdGlvbnMgb24gL2Rhc2hib2FyZHMve2lkfVxuICovXG5tb2R1bGUuZXhwb3J0cyA9IHtcbiAgICAvKipcbiAgICAgKiBzdW1tYXJ5OiBHZXQgYSBzcGVjaWZpYyBkYXNoYm9hcmRzIGJ5IGlkXG4gICAgICogZGVzY3JpcHRpb246IEdldCBhIHNwZWNpZmljIGRhc2hib2FyZHMgYnkgaWRcbiAgICAgKiBwYXJhbWV0ZXJzOiBpZFxuICAgICAqIHByb2R1Y2VzOiBhcHBsaWNhdGlvbi9qc29uXG4gICAgICogcmVzcG9uc2VzOiAyMDBcbiAgICAgKi9cbiAgICBnZXQ6IGZ1bmN0aW9uIGdldERhc2hib2FyZEJ5SWQocmVxLCByZXMsIG5leHQpIHtcbiAgICAgICAgLyoqXG4gICAgICAgICAqIEdldCB0aGUgZGF0YSBmb3IgcmVzcG9uc2UgMjAwXG4gICAgICAgICAqIEZvciByZXNwb25zZSBgZGVmYXVsdGAgc3RhdHVzIDIwMCBpcyB1c2VkLlxuICAgICAgICAgKi9cbiAgICAgICAgdmFyIHN0YXR1cyA9IDIwMDtcbiAgICAgICAgdmFyIHByb3ZpZGVyID0gZGF0YVByb3ZpZGVyWydnZXQnXVsnMjAwJ107XG4gICAgICAgIHByb3ZpZGVyKHJlcSwgcmVzLCBmdW5jdGlvbiAoZXJyLCBkYXRhKSB7XG4gICAgICAgICAgICBpZiAoZXJyKSB7XG4gICAgICAgICAgICAgICAgbmV4dChlcnIpO1xuICAgICAgICAgICAgICAgIHJldHVybjtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIHJlcy5zdGF0dXMoc3RhdHVzKS5zZW5kKGRhdGEgJiYgZGF0YS5yZXNwb25zZXMpO1xuICAgICAgICB9KTtcbiAgICB9XG59O1xuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "{id}.js"
+      ],
+      "names": [
+        "dataProvider",
+        "require",
+        "module",
+        "exports",
+        "get",
+        "getDashboardById",
+        "req",
+        "res",
+        "next",
+        "status",
+        "provider",
+        "err",
+        "data",
+        "send",
+        "responses"
+      ],
+      "mappings": "AAAA;;AACA,IAAIA,eAAeC,QAAQ,+BAAR,CAAnB;AACA;;;AAGAC,OAAOC,OAAP,GAAiB;AACb;;;;;;;AAOAC,SAAK,SAASC,gBAAT,CAA0BC,GAA1B,EAA+BC,GAA/B,EAAoCC,IAApC,EAA0C;AAC3C;;;;AAIA,YAAIC,SAAS,GAAb;AACA,YAAIC,WAAWV,aAAa,KAAb,EAAoB,KAApB,CAAf;AACAU,iBAASJ,GAAT,EAAcC,GAAd,EAAmB,UAAUI,GAAV,EAAeC,IAAf,EAAqB;AACpC,gBAAID,GAAJ,EAAS;AACLH,qBAAKG,GAAL;AACA;AACH;AACDJ,gBAAIE,MAAJ,CAAWA,MAAX,EAAmBI,IAAnB,CAAwBD,QAAQA,KAAKE,SAArC;AACH,SAND;AAOH;AAtBY,CAAjB",
+      "file": "{id}.js",
+      "sourceRoot": "/app/handlers/dashboards",
+      "sourcesContent": [
+        "'use strict';\nvar dataProvider = require('../../data/dashboards/{id}.js');\n/**\n * Operations on /dashboards/{id}\n */\nmodule.exports = {\n    /**\n     * summary: Get a specific dashboards by id\n     * description: Get a specific dashboards by id\n     * parameters: id\n     * produces: application/json\n     * responses: 200\n     */\n    get: function getDashboardById(req, res, next) {\n        /**\n         * Get the data for response 200\n         * For response `default` status 200 is used.\n         */\n        var status = 200;\n        var provider = dataProvider['get']['200'];\n        provider(req, res, function (err, data) {\n            if (err) {\n                next(err);\n                return;\n            }\n            res.status(status).send(data && data.responses);\n        });\n    }\n};\n"
+      ]
+    },
+    "mtime": 1521806710163
+  },
+  "{\"filename\":\"/app/data/dashboards/{id}.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/data/dashboards\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "./../../services/errorService",
+            "imported": [
+              "expressError"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "expressError",
+                "local": "expressError"
+              }
+            ]
+          },
+          {
+            "source": "../../services/dashboardService",
+            "imported": [
+              "getDashboardById"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "getDashboardById",
+                "local": "getDashboardById"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/data/dashboards/{id}.js",
+      "filenameRelative": "/app/data/dashboards/{id}.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "{id}.js",
+      "sourceFileName": "{id}.js",
+      "sourceRoot": "/app/data/dashboards",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/data/dashboards",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "{id}"
+    },
+    "ignored": false,
+    "code": "\"use strict\";\n\nvar _errorService = require(\"./../../services/errorService\");\n\nvar _dashboardService = require(\"../../services/dashboardService\");\n\n/**\n * Operations on /dashboards/{id}\n */\nmodule.exports = {\n  /**\n   * summary: Get a specific dashboards by id\n   * description: Get a specific dashboards by id\n   * parameters: id\n   * produces: application/json\n   * responses: 200\n   * operationId: getDashboardById\n   */\n  get: {\n    200: function _(req, res) {\n      (0, _dashboardService.getDashboardById)(req.params.id).then(function (result) {\n        return res.json(result);\n      }).catch(function (err) {\n        return (0, _errorService.expressError)(err);\n      });\n    }\n  }\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIntpZH0uanMiXSwibmFtZXMiOlsibW9kdWxlIiwiZXhwb3J0cyIsImdldCIsInJlcSIsInJlcyIsInBhcmFtcyIsImlkIiwidGhlbiIsImpzb24iLCJyZXN1bHQiLCJjYXRjaCIsImVyciJdLCJtYXBwaW5ncyI6IkFBQUE7O0FBRUE7O0FBQ0E7O0FBRUE7OztBQUdBQSxPQUFPQyxPQUFQLEdBQWlCO0FBQ2Y7Ozs7Ozs7O0FBUUFDLE9BQUs7QUFDSCxTQUFLLFdBQVNDLEdBQVQsRUFBY0MsR0FBZCxFQUFtQjtBQUN0Qiw4Q0FBaUJELElBQUlFLE1BQUosQ0FBV0MsRUFBNUIsRUFDR0MsSUFESCxDQUNRO0FBQUEsZUFBVUgsSUFBSUksSUFBSixDQUFTQyxNQUFULENBQVY7QUFBQSxPQURSLEVBRUdDLEtBRkgsQ0FFUztBQUFBLGVBQU8sZ0NBQWFDLEdBQWIsQ0FBUDtBQUFBLE9BRlQ7QUFHRDtBQUxFO0FBVFUsQ0FBakIiLCJmaWxlIjoie2lkfS5qcyIsInNvdXJjZVJvb3QiOiIvYXBwL2RhdGEvZGFzaGJvYXJkcyIsInNvdXJjZXNDb250ZW50IjpbIlwidXNlIHN0cmljdFwiO1xuXG5pbXBvcnQgeyBleHByZXNzRXJyb3IgfSBmcm9tIFwiLi8uLi8uLi9zZXJ2aWNlcy9lcnJvclNlcnZpY2VcIjtcbmltcG9ydCB7IGdldERhc2hib2FyZEJ5SWQgfSBmcm9tIFwiLi4vLi4vc2VydmljZXMvZGFzaGJvYXJkU2VydmljZVwiO1xuXG4vKipcbiAqIE9wZXJhdGlvbnMgb24gL2Rhc2hib2FyZHMve2lkfVxuICovXG5tb2R1bGUuZXhwb3J0cyA9IHtcbiAgLyoqXG4gICAqIHN1bW1hcnk6IEdldCBhIHNwZWNpZmljIGRhc2hib2FyZHMgYnkgaWRcbiAgICogZGVzY3JpcHRpb246IEdldCBhIHNwZWNpZmljIGRhc2hib2FyZHMgYnkgaWRcbiAgICogcGFyYW1ldGVyczogaWRcbiAgICogcHJvZHVjZXM6IGFwcGxpY2F0aW9uL2pzb25cbiAgICogcmVzcG9uc2VzOiAyMDBcbiAgICogb3BlcmF0aW9uSWQ6IGdldERhc2hib2FyZEJ5SWRcbiAgICovXG4gIGdldDoge1xuICAgIDIwMDogZnVuY3Rpb24ocmVxLCByZXMpIHtcbiAgICAgIGdldERhc2hib2FyZEJ5SWQocmVxLnBhcmFtcy5pZClcbiAgICAgICAgLnRoZW4ocmVzdWx0ID0+IHJlcy5qc29uKHJlc3VsdCkpXG4gICAgICAgIC5jYXRjaChlcnIgPT4gZXhwcmVzc0Vycm9yKGVycikpO1xuICAgIH1cbiAgfVxufTtcbiJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "{id}.js"
+      ],
+      "names": [
+        "module",
+        "exports",
+        "get",
+        "req",
+        "res",
+        "params",
+        "id",
+        "then",
+        "json",
+        "result",
+        "catch",
+        "err"
+      ],
+      "mappings": "AAAA;;AAEA;;AACA;;AAEA;;;AAGAA,OAAOC,OAAP,GAAiB;AACf;;;;;;;;AAQAC,OAAK;AACH,SAAK,WAASC,GAAT,EAAcC,GAAd,EAAmB;AACtB,8CAAiBD,IAAIE,MAAJ,CAAWC,EAA5B,EACGC,IADH,CACQ;AAAA,eAAUH,IAAII,IAAJ,CAASC,MAAT,CAAV;AAAA,OADR,EAEGC,KAFH,CAES;AAAA,eAAO,gCAAaC,GAAb,CAAP;AAAA,OAFT;AAGD;AALE;AATU,CAAjB",
+      "file": "{id}.js",
+      "sourceRoot": "/app/data/dashboards",
+      "sourcesContent": [
+        "\"use strict\";\n\nimport { expressError } from \"./../../services/errorService\";\nimport { getDashboardById } from \"../../services/dashboardService\";\n\n/**\n * Operations on /dashboards/{id}\n */\nmodule.exports = {\n  /**\n   * summary: Get a specific dashboards by id\n   * description: Get a specific dashboards by id\n   * parameters: id\n   * produces: application/json\n   * responses: 200\n   * operationId: getDashboardById\n   */\n  get: {\n    200: function(req, res) {\n      getDashboardById(req.params.id)\n        .then(result => res.json(result))\n        .catch(err => expressError(err));\n    }\n  }\n};\n"
+      ]
+    },
+    "mtime": 1521809577307
+  },
+  "{\"filename\":\"/app/data/mockgen.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/data\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/data/mockgen.js",
+      "filenameRelative": "/app/data/mockgen.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "mockgen.js",
+      "sourceFileName": "mockgen.js",
+      "sourceRoot": "/app/data",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/data",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "mockgen"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar Swagmock = require('swagmock');\nvar Path = require('path');\nvar apiPath = Path.resolve(__dirname, '../config/swagger.json');\nvar mockgen;\n\nmodule.exports = function () {\n  /**\n   * Cached mock generator\n   */\n  mockgen = mockgen || Swagmock(apiPath);\n  return mockgen;\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1vY2tnZW4uanMiXSwibmFtZXMiOlsiU3dhZ21vY2siLCJyZXF1aXJlIiwiUGF0aCIsImFwaVBhdGgiLCJyZXNvbHZlIiwiX19kaXJuYW1lIiwibW9ja2dlbiIsIm1vZHVsZSIsImV4cG9ydHMiXSwibWFwcGluZ3MiOiJBQUFBOztBQUNBLElBQUlBLFdBQVdDLFFBQVEsVUFBUixDQUFmO0FBQ0EsSUFBSUMsT0FBT0QsUUFBUSxNQUFSLENBQVg7QUFDQSxJQUFJRSxVQUFVRCxLQUFLRSxPQUFMLENBQWFDLFNBQWIsRUFBd0Isd0JBQXhCLENBQWQ7QUFDQSxJQUFJQyxPQUFKOztBQUVBQyxPQUFPQyxPQUFQLEdBQWlCLFlBQVk7QUFDekI7OztBQUdBRixZQUFVQSxXQUFXTixTQUFTRyxPQUFULENBQXJCO0FBQ0EsU0FBT0csT0FBUDtBQUNILENBTkQiLCJmaWxlIjoibW9ja2dlbi5qcyIsInNvdXJjZVJvb3QiOiIvYXBwL2RhdGEiLCJzb3VyY2VzQ29udGVudCI6WyIndXNlIHN0cmljdCc7XG52YXIgU3dhZ21vY2sgPSByZXF1aXJlKCdzd2FnbW9jaycpO1xudmFyIFBhdGggPSByZXF1aXJlKCdwYXRoJyk7XG52YXIgYXBpUGF0aCA9IFBhdGgucmVzb2x2ZShfX2Rpcm5hbWUsICcuLi9jb25maWcvc3dhZ2dlci5qc29uJyk7XG52YXIgbW9ja2dlbjtcblxubW9kdWxlLmV4cG9ydHMgPSBmdW5jdGlvbiAoKSB7XG4gICAgLyoqXG4gICAgICogQ2FjaGVkIG1vY2sgZ2VuZXJhdG9yXG4gICAgICovXG4gICAgbW9ja2dlbiA9IG1vY2tnZW4gfHwgU3dhZ21vY2soYXBpUGF0aCk7XG4gICAgcmV0dXJuIG1vY2tnZW47XG59O1xuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "mockgen.js"
+      ],
+      "names": [
+        "Swagmock",
+        "require",
+        "Path",
+        "apiPath",
+        "resolve",
+        "__dirname",
+        "mockgen",
+        "module",
+        "exports"
+      ],
+      "mappings": "AAAA;;AACA,IAAIA,WAAWC,QAAQ,UAAR,CAAf;AACA,IAAIC,OAAOD,QAAQ,MAAR,CAAX;AACA,IAAIE,UAAUD,KAAKE,OAAL,CAAaC,SAAb,EAAwB,wBAAxB,CAAd;AACA,IAAIC,OAAJ;;AAEAC,OAAOC,OAAP,GAAiB,YAAY;AACzB;;;AAGAF,YAAUA,WAAWN,SAASG,OAAT,CAArB;AACA,SAAOG,OAAP;AACH,CAND",
+      "file": "mockgen.js",
+      "sourceRoot": "/app/data",
+      "sourcesContent": [
+        "'use strict';\nvar Swagmock = require('swagmock');\nvar Path = require('path');\nvar apiPath = Path.resolve(__dirname, '../config/swagger.json');\nvar mockgen;\n\nmodule.exports = function () {\n    /**\n     * Cached mock generator\n     */\n    mockgen = mockgen || Swagmock(apiPath);\n    return mockgen;\n};\n"
+      ]
+    },
+    "mtime": 1521752048770
+  },
+  "{\"filename\":\"/app/handlers/dashboards.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/handlers\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/handlers/dashboards.js",
+      "filenameRelative": "/app/handlers/dashboards.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "dashboards.js",
+      "sourceFileName": "dashboards.js",
+      "sourceRoot": "/app/handlers",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/handlers",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "dashboards"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar dataProvider = require('../data/dashboards.js');\n/**\n * Operations on /dashboards/\n */\nmodule.exports = {\n    /**\n     * summary: Get all dashboards\n     * description: Get all dashboards\n     * parameters: \n     * produces: application/json\n     * responses: 200\n     */\n    get: function getDashboards(req, res, next) {\n        /**\n         * Get the data for response 200\n         * For response `default` status 200 is used.\n         */\n        var status = 200;\n        var provider = dataProvider['get']['200'];\n        provider(req, res, function (err, data) {\n            if (err) {\n                next(err);\n                return;\n            }\n            res.status(status).send(data && data.responses);\n        });\n    },\n    /**\n     * summary: Add a new dashboard\n     * description: Add a new dashboard\n     * parameters: body\n     * produces: application/json\n     * responses: 200\n     */\n    post: function addDashboard(req, res, next) {\n        /**\n         * Get the data for response 200\n         * For response `default` status 200 is used.\n         */\n        var status = 200;\n        var provider = dataProvider['post']['200'];\n        provider(req, res, function (err, data) {\n            if (err) {\n                next(err);\n                return;\n            }\n            res.status(status).send(data && data.responses);\n        });\n    }\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRhc2hib2FyZHMuanMiXSwibmFtZXMiOlsiZGF0YVByb3ZpZGVyIiwicmVxdWlyZSIsIm1vZHVsZSIsImV4cG9ydHMiLCJnZXQiLCJnZXREYXNoYm9hcmRzIiwicmVxIiwicmVzIiwibmV4dCIsInN0YXR1cyIsInByb3ZpZGVyIiwiZXJyIiwiZGF0YSIsInNlbmQiLCJyZXNwb25zZXMiLCJwb3N0IiwiYWRkRGFzaGJvYXJkIl0sIm1hcHBpbmdzIjoiQUFBQTs7QUFDQSxJQUFJQSxlQUFlQyxRQUFRLHVCQUFSLENBQW5CO0FBQ0E7OztBQUdBQyxPQUFPQyxPQUFQLEdBQWlCO0FBQ2I7Ozs7Ozs7QUFPQUMsU0FBSyxTQUFTQyxhQUFULENBQXVCQyxHQUF2QixFQUE0QkMsR0FBNUIsRUFBaUNDLElBQWpDLEVBQXVDO0FBQ3hDOzs7O0FBSUEsWUFBSUMsU0FBUyxHQUFiO0FBQ0EsWUFBSUMsV0FBV1YsYUFBYSxLQUFiLEVBQW9CLEtBQXBCLENBQWY7QUFDQVUsaUJBQVNKLEdBQVQsRUFBY0MsR0FBZCxFQUFtQixVQUFVSSxHQUFWLEVBQWVDLElBQWYsRUFBcUI7QUFDcEMsZ0JBQUlELEdBQUosRUFBUztBQUNMSCxxQkFBS0csR0FBTDtBQUNBO0FBQ0g7QUFDREosZ0JBQUlFLE1BQUosQ0FBV0EsTUFBWCxFQUFtQkksSUFBbkIsQ0FBd0JELFFBQVFBLEtBQUtFLFNBQXJDO0FBQ0gsU0FORDtBQU9ILEtBdEJZO0FBdUJiOzs7Ozs7O0FBT0FDLFVBQU0sU0FBU0MsWUFBVCxDQUFzQlYsR0FBdEIsRUFBMkJDLEdBQTNCLEVBQWdDQyxJQUFoQyxFQUFzQztBQUN4Qzs7OztBQUlBLFlBQUlDLFNBQVMsR0FBYjtBQUNBLFlBQUlDLFdBQVdWLGFBQWEsTUFBYixFQUFxQixLQUFyQixDQUFmO0FBQ0FVLGlCQUFTSixHQUFULEVBQWNDLEdBQWQsRUFBbUIsVUFBVUksR0FBVixFQUFlQyxJQUFmLEVBQXFCO0FBQ3BDLGdCQUFJRCxHQUFKLEVBQVM7QUFDTEgscUJBQUtHLEdBQUw7QUFDQTtBQUNIO0FBQ0RKLGdCQUFJRSxNQUFKLENBQVdBLE1BQVgsRUFBbUJJLElBQW5CLENBQXdCRCxRQUFRQSxLQUFLRSxTQUFyQztBQUNILFNBTkQ7QUFPSDtBQTVDWSxDQUFqQiIsImZpbGUiOiJkYXNoYm9hcmRzLmpzIiwic291cmNlUm9vdCI6Ii9hcHAvaGFuZGxlcnMiLCJzb3VyY2VzQ29udGVudCI6WyIndXNlIHN0cmljdCc7XG52YXIgZGF0YVByb3ZpZGVyID0gcmVxdWlyZSgnLi4vZGF0YS9kYXNoYm9hcmRzLmpzJyk7XG4vKipcbiAqIE9wZXJhdGlvbnMgb24gL2Rhc2hib2FyZHMvXG4gKi9cbm1vZHVsZS5leHBvcnRzID0ge1xuICAgIC8qKlxuICAgICAqIHN1bW1hcnk6IEdldCBhbGwgZGFzaGJvYXJkc1xuICAgICAqIGRlc2NyaXB0aW9uOiBHZXQgYWxsIGRhc2hib2FyZHNcbiAgICAgKiBwYXJhbWV0ZXJzOiBcbiAgICAgKiBwcm9kdWNlczogYXBwbGljYXRpb24vanNvblxuICAgICAqIHJlc3BvbnNlczogMjAwXG4gICAgICovXG4gICAgZ2V0OiBmdW5jdGlvbiBnZXREYXNoYm9hcmRzKHJlcSwgcmVzLCBuZXh0KSB7XG4gICAgICAgIC8qKlxuICAgICAgICAgKiBHZXQgdGhlIGRhdGEgZm9yIHJlc3BvbnNlIDIwMFxuICAgICAgICAgKiBGb3IgcmVzcG9uc2UgYGRlZmF1bHRgIHN0YXR1cyAyMDAgaXMgdXNlZC5cbiAgICAgICAgICovXG4gICAgICAgIHZhciBzdGF0dXMgPSAyMDA7XG4gICAgICAgIHZhciBwcm92aWRlciA9IGRhdGFQcm92aWRlclsnZ2V0J11bJzIwMCddO1xuICAgICAgICBwcm92aWRlcihyZXEsIHJlcywgZnVuY3Rpb24gKGVyciwgZGF0YSkge1xuICAgICAgICAgICAgaWYgKGVycikge1xuICAgICAgICAgICAgICAgIG5leHQoZXJyKTtcbiAgICAgICAgICAgICAgICByZXR1cm47XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICByZXMuc3RhdHVzKHN0YXR1cykuc2VuZChkYXRhICYmIGRhdGEucmVzcG9uc2VzKTtcbiAgICAgICAgfSk7XG4gICAgfSxcbiAgICAvKipcbiAgICAgKiBzdW1tYXJ5OiBBZGQgYSBuZXcgZGFzaGJvYXJkXG4gICAgICogZGVzY3JpcHRpb246IEFkZCBhIG5ldyBkYXNoYm9hcmRcbiAgICAgKiBwYXJhbWV0ZXJzOiBib2R5XG4gICAgICogcHJvZHVjZXM6IGFwcGxpY2F0aW9uL2pzb25cbiAgICAgKiByZXNwb25zZXM6IDIwMFxuICAgICAqL1xuICAgIHBvc3Q6IGZ1bmN0aW9uIGFkZERhc2hib2FyZChyZXEsIHJlcywgbmV4dCkge1xuICAgICAgICAvKipcbiAgICAgICAgICogR2V0IHRoZSBkYXRhIGZvciByZXNwb25zZSAyMDBcbiAgICAgICAgICogRm9yIHJlc3BvbnNlIGBkZWZhdWx0YCBzdGF0dXMgMjAwIGlzIHVzZWQuXG4gICAgICAgICAqL1xuICAgICAgICB2YXIgc3RhdHVzID0gMjAwO1xuICAgICAgICB2YXIgcHJvdmlkZXIgPSBkYXRhUHJvdmlkZXJbJ3Bvc3QnXVsnMjAwJ107XG4gICAgICAgIHByb3ZpZGVyKHJlcSwgcmVzLCBmdW5jdGlvbiAoZXJyLCBkYXRhKSB7XG4gICAgICAgICAgICBpZiAoZXJyKSB7XG4gICAgICAgICAgICAgICAgbmV4dChlcnIpO1xuICAgICAgICAgICAgICAgIHJldHVybjtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIHJlcy5zdGF0dXMoc3RhdHVzKS5zZW5kKGRhdGEgJiYgZGF0YS5yZXNwb25zZXMpO1xuICAgICAgICB9KTtcbiAgICB9XG59O1xuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "dashboards.js"
+      ],
+      "names": [
+        "dataProvider",
+        "require",
+        "module",
+        "exports",
+        "get",
+        "getDashboards",
+        "req",
+        "res",
+        "next",
+        "status",
+        "provider",
+        "err",
+        "data",
+        "send",
+        "responses",
+        "post",
+        "addDashboard"
+      ],
+      "mappings": "AAAA;;AACA,IAAIA,eAAeC,QAAQ,uBAAR,CAAnB;AACA;;;AAGAC,OAAOC,OAAP,GAAiB;AACb;;;;;;;AAOAC,SAAK,SAASC,aAAT,CAAuBC,GAAvB,EAA4BC,GAA5B,EAAiCC,IAAjC,EAAuC;AACxC;;;;AAIA,YAAIC,SAAS,GAAb;AACA,YAAIC,WAAWV,aAAa,KAAb,EAAoB,KAApB,CAAf;AACAU,iBAASJ,GAAT,EAAcC,GAAd,EAAmB,UAAUI,GAAV,EAAeC,IAAf,EAAqB;AACpC,gBAAID,GAAJ,EAAS;AACLH,qBAAKG,GAAL;AACA;AACH;AACDJ,gBAAIE,MAAJ,CAAWA,MAAX,EAAmBI,IAAnB,CAAwBD,QAAQA,KAAKE,SAArC;AACH,SAND;AAOH,KAtBY;AAuBb;;;;;;;AAOAC,UAAM,SAASC,YAAT,CAAsBV,GAAtB,EAA2BC,GAA3B,EAAgCC,IAAhC,EAAsC;AACxC;;;;AAIA,YAAIC,SAAS,GAAb;AACA,YAAIC,WAAWV,aAAa,MAAb,EAAqB,KAArB,CAAf;AACAU,iBAASJ,GAAT,EAAcC,GAAd,EAAmB,UAAUI,GAAV,EAAeC,IAAf,EAAqB;AACpC,gBAAID,GAAJ,EAAS;AACLH,qBAAKG,GAAL;AACA;AACH;AACDJ,gBAAIE,MAAJ,CAAWA,MAAX,EAAmBI,IAAnB,CAAwBD,QAAQA,KAAKE,SAArC;AACH,SAND;AAOH;AA5CY,CAAjB",
+      "file": "dashboards.js",
+      "sourceRoot": "/app/handlers",
+      "sourcesContent": [
+        "'use strict';\nvar dataProvider = require('../data/dashboards.js');\n/**\n * Operations on /dashboards/\n */\nmodule.exports = {\n    /**\n     * summary: Get all dashboards\n     * description: Get all dashboards\n     * parameters: \n     * produces: application/json\n     * responses: 200\n     */\n    get: function getDashboards(req, res, next) {\n        /**\n         * Get the data for response 200\n         * For response `default` status 200 is used.\n         */\n        var status = 200;\n        var provider = dataProvider['get']['200'];\n        provider(req, res, function (err, data) {\n            if (err) {\n                next(err);\n                return;\n            }\n            res.status(status).send(data && data.responses);\n        });\n    },\n    /**\n     * summary: Add a new dashboard\n     * description: Add a new dashboard\n     * parameters: body\n     * produces: application/json\n     * responses: 200\n     */\n    post: function addDashboard(req, res, next) {\n        /**\n         * Get the data for response 200\n         * For response `default` status 200 is used.\n         */\n        var status = 200;\n        var provider = dataProvider['post']['200'];\n        provider(req, res, function (err, data) {\n            if (err) {\n                next(err);\n                return;\n            }\n            res.status(status).send(data && data.responses);\n        });\n    }\n};\n"
+      ]
+    },
+    "mtime": 1521806710162
+  },
+  "{\"filename\":\"/app/data/dashboards.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/data\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "./../services/errorService",
+            "imported": [
+              "expressError"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "expressError",
+                "local": "expressError"
+              }
+            ]
+          },
+          {
+            "source": "./../services/dashboardService",
+            "imported": [
+              "getDashboards",
+              "addDashboard"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "getDashboards",
+                "local": "getDashboards"
+              },
+              {
+                "kind": "named",
+                "imported": "addDashboard",
+                "local": "addDashboard"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/data/dashboards.js",
+      "filenameRelative": "/app/data/dashboards.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "dashboards.js",
+      "sourceFileName": "dashboards.js",
+      "sourceRoot": "/app/data",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/data",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "dashboards"
+    },
+    "ignored": false,
+    "code": "\"use strict\";\n\nvar _errorService = require(\"./../services/errorService\");\n\nvar _dashboardService = require(\"./../services/dashboardService\");\n\n/**\n * Operations on /dashboards/\n */\nmodule.exports = {\n  /**\n   * summary: Get all dashboards\n   * description: Get all dashboards\n   * parameters:\n   * produces: application/json\n   * responses: 200\n   * operationId: getDashboards\n   */\n  get: {\n    200: function _(req, res) {\n      (0, _dashboardService.getDashboards)().then(function (result) {\n        return res.json(result);\n      }).catch(function (err) {\n        return (0, _errorService.expressError)(err);\n      });\n    }\n  },\n  /**\n   * summary: Add a new dashboard\n   * description: Add a new dashboard\n   * parameters: body\n   * produces: application/json\n   * responses: 200\n   * operationId: addDashboard\n   */\n  post: {\n    200: function _(req, res) {\n      // delete ID if set\n      delete req.body[\"id\"];\n      (0, _dashboardService.addDashboard)(req.body).then(function (result) {\n        return res.json(result);\n      }).catch(function (err) {\n        return (0, _errorService.expressError)(err);\n      });\n    }\n  }\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRhc2hib2FyZHMuanMiXSwibmFtZXMiOlsibW9kdWxlIiwiZXhwb3J0cyIsImdldCIsInJlcSIsInJlcyIsInRoZW4iLCJqc29uIiwicmVzdWx0IiwiY2F0Y2giLCJlcnIiLCJwb3N0IiwiYm9keSJdLCJtYXBwaW5ncyI6IkFBQUE7O0FBQ0E7O0FBQ0E7O0FBRUE7OztBQUdBQSxPQUFPQyxPQUFQLEdBQWlCO0FBQ2Y7Ozs7Ozs7O0FBUUFDLE9BQUs7QUFDSCxTQUFLLFdBQVNDLEdBQVQsRUFBY0MsR0FBZCxFQUFtQjtBQUN0Qiw2Q0FDR0MsSUFESCxDQUNRO0FBQUEsZUFBVUQsSUFBSUUsSUFBSixDQUFTQyxNQUFULENBQVY7QUFBQSxPQURSLEVBRUdDLEtBRkgsQ0FFUztBQUFBLGVBQU8sZ0NBQWFDLEdBQWIsQ0FBUDtBQUFBLE9BRlQ7QUFHRDtBQUxFLEdBVFU7QUFnQmY7Ozs7Ozs7O0FBUUFDLFFBQU07QUFDSixTQUFLLFdBQVNQLEdBQVQsRUFBY0MsR0FBZCxFQUFtQjtBQUN0QjtBQUNBLGFBQU9ELElBQUlRLElBQUosQ0FBUyxJQUFULENBQVA7QUFDQSwwQ0FBYVIsSUFBSVEsSUFBakIsRUFDR04sSUFESCxDQUNRO0FBQUEsZUFBVUQsSUFBSUUsSUFBSixDQUFTQyxNQUFULENBQVY7QUFBQSxPQURSLEVBRUdDLEtBRkgsQ0FFUztBQUFBLGVBQU8sZ0NBQWFDLEdBQWIsQ0FBUDtBQUFBLE9BRlQ7QUFHRDtBQVBHO0FBeEJTLENBQWpCIiwiZmlsZSI6ImRhc2hib2FyZHMuanMiLCJzb3VyY2VSb290IjoiL2FwcC9kYXRhIiwic291cmNlc0NvbnRlbnQiOlsiXCJ1c2Ugc3RyaWN0XCI7XG5pbXBvcnQgeyBleHByZXNzRXJyb3IgfSBmcm9tIFwiLi8uLi9zZXJ2aWNlcy9lcnJvclNlcnZpY2VcIjtcbmltcG9ydCB7IGdldERhc2hib2FyZHMsIGFkZERhc2hib2FyZCB9IGZyb20gXCIuLy4uL3NlcnZpY2VzL2Rhc2hib2FyZFNlcnZpY2VcIjtcblxuLyoqXG4gKiBPcGVyYXRpb25zIG9uIC9kYXNoYm9hcmRzL1xuICovXG5tb2R1bGUuZXhwb3J0cyA9IHtcbiAgLyoqXG4gICAqIHN1bW1hcnk6IEdldCBhbGwgZGFzaGJvYXJkc1xuICAgKiBkZXNjcmlwdGlvbjogR2V0IGFsbCBkYXNoYm9hcmRzXG4gICAqIHBhcmFtZXRlcnM6XG4gICAqIHByb2R1Y2VzOiBhcHBsaWNhdGlvbi9qc29uXG4gICAqIHJlc3BvbnNlczogMjAwXG4gICAqIG9wZXJhdGlvbklkOiBnZXREYXNoYm9hcmRzXG4gICAqL1xuICBnZXQ6IHtcbiAgICAyMDA6IGZ1bmN0aW9uKHJlcSwgcmVzKSB7XG4gICAgICBnZXREYXNoYm9hcmRzKClcbiAgICAgICAgLnRoZW4ocmVzdWx0ID0+IHJlcy5qc29uKHJlc3VsdCkpXG4gICAgICAgIC5jYXRjaChlcnIgPT4gZXhwcmVzc0Vycm9yKGVycikpO1xuICAgIH1cbiAgfSxcbiAgLyoqXG4gICAqIHN1bW1hcnk6IEFkZCBhIG5ldyBkYXNoYm9hcmRcbiAgICogZGVzY3JpcHRpb246IEFkZCBhIG5ldyBkYXNoYm9hcmRcbiAgICogcGFyYW1ldGVyczogYm9keVxuICAgKiBwcm9kdWNlczogYXBwbGljYXRpb24vanNvblxuICAgKiByZXNwb25zZXM6IDIwMFxuICAgKiBvcGVyYXRpb25JZDogYWRkRGFzaGJvYXJkXG4gICAqL1xuICBwb3N0OiB7XG4gICAgMjAwOiBmdW5jdGlvbihyZXEsIHJlcykge1xuICAgICAgLy8gZGVsZXRlIElEIGlmIHNldFxuICAgICAgZGVsZXRlIHJlcS5ib2R5W1wiaWRcIl07XG4gICAgICBhZGREYXNoYm9hcmQocmVxLmJvZHkpXG4gICAgICAgIC50aGVuKHJlc3VsdCA9PiByZXMuanNvbihyZXN1bHQpKVxuICAgICAgICAuY2F0Y2goZXJyID0+IGV4cHJlc3NFcnJvcihlcnIpKTtcbiAgICB9XG4gIH1cbn07XG4iXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "dashboards.js"
+      ],
+      "names": [
+        "module",
+        "exports",
+        "get",
+        "req",
+        "res",
+        "then",
+        "json",
+        "result",
+        "catch",
+        "err",
+        "post",
+        "body"
+      ],
+      "mappings": "AAAA;;AACA;;AACA;;AAEA;;;AAGAA,OAAOC,OAAP,GAAiB;AACf;;;;;;;;AAQAC,OAAK;AACH,SAAK,WAASC,GAAT,EAAcC,GAAd,EAAmB;AACtB,6CACGC,IADH,CACQ;AAAA,eAAUD,IAAIE,IAAJ,CAASC,MAAT,CAAV;AAAA,OADR,EAEGC,KAFH,CAES;AAAA,eAAO,gCAAaC,GAAb,CAAP;AAAA,OAFT;AAGD;AALE,GATU;AAgBf;;;;;;;;AAQAC,QAAM;AACJ,SAAK,WAASP,GAAT,EAAcC,GAAd,EAAmB;AACtB;AACA,aAAOD,IAAIQ,IAAJ,CAAS,IAAT,CAAP;AACA,0CAAaR,IAAIQ,IAAjB,EACGN,IADH,CACQ;AAAA,eAAUD,IAAIE,IAAJ,CAASC,MAAT,CAAV;AAAA,OADR,EAEGC,KAFH,CAES;AAAA,eAAO,gCAAaC,GAAb,CAAP;AAAA,OAFT;AAGD;AAPG;AAxBS,CAAjB",
+      "file": "dashboards.js",
+      "sourceRoot": "/app/data",
+      "sourcesContent": [
+        "\"use strict\";\nimport { expressError } from \"./../services/errorService\";\nimport { getDashboards, addDashboard } from \"./../services/dashboardService\";\n\n/**\n * Operations on /dashboards/\n */\nmodule.exports = {\n  /**\n   * summary: Get all dashboards\n   * description: Get all dashboards\n   * parameters:\n   * produces: application/json\n   * responses: 200\n   * operationId: getDashboards\n   */\n  get: {\n    200: function(req, res) {\n      getDashboards()\n        .then(result => res.json(result))\n        .catch(err => expressError(err));\n    }\n  },\n  /**\n   * summary: Add a new dashboard\n   * description: Add a new dashboard\n   * parameters: body\n   * produces: application/json\n   * responses: 200\n   * operationId: addDashboard\n   */\n  post: {\n    200: function(req, res) {\n      // delete ID if set\n      delete req.body[\"id\"];\n      addDashboard(req.body)\n        .then(result => res.json(result))\n        .catch(err => expressError(err));\n    }\n  }\n};\n"
+      ]
+    },
+    "mtime": 1521808575018
+  },
+  "{\"filename\":\"/app/services/errorService.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/services\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [
+        "createClass",
+        "classCallCheck"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [
+            "Error",
+            "expressError",
+            "createError",
+            "errorMessages"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "Error",
+              "exported": "Error"
+            },
+            {
+              "kind": "local",
+              "local": "expressError",
+              "exported": "expressError"
+            },
+            {
+              "kind": "local",
+              "local": "createError",
+              "exported": "createError"
+            },
+            {
+              "kind": "local",
+              "local": "errorMessages",
+              "exported": "errorMessages"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/services/errorService.js",
+      "filenameRelative": "/app/services/errorService.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "errorService.js",
+      "sourceFileName": "errorService.js",
+      "sourceRoot": "/app/services",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/services",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "errorService"
+    },
+    "ignored": false,
+    "code": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Error = exports.Error = function () {\n  /**\n   *\n   * @param {string} message message of the error\n   * @param {int} code http error code\n   */\n  function Error() {\n    var message = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : \"Generic error\";\n    var code = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;\n    var errorObject = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};\n\n    _classCallCheck(this, Error);\n\n    this.message = message;\n    this.code = code;\n    this.errorObject = errorObject;\n  }\n\n  _createClass(Error, [{\n    key: \"toJson\",\n    value: function toJson() {\n      var returnObj = { error: { code: this.code, message: this.message } };\n\n      for (var key in this.errorObject) {\n        if (this.errorObject.hasOwnProperty(key)) {\n          returnObj.errorObject = this.errorObject;\n        }\n      }\n\n      return returnObj;\n    }\n  }]);\n\n  return Error;\n}();\n\n/**\n * send an express error\n * @param {*} req\n * @param {*} res\n * @param {*} error\n */\n\n\nvar expressError = exports.expressError = function expressError(req, res, error) {\n  if (!(error instanceof Error)) {\n    error = new Error();\n  }\n  res.status(error.code);\n  res.json(error.toJson());\n};\n\n/**\n * returns a new error object\n * @param {*} message\n * @param {*} code http status code\n * @param {*} errorObject any extra error info\n */\nvar createError = exports.createError = function createError() {\n  var message = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : \"Generic error\";\n  var code = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 404;\n  var errorObject = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};\n\n  return new Error(message, code, errorObject);\n};\n\nvar errorMessages = exports.errorMessages = {\n  \"something\": \"Something went wrong.\",\n  \"invalidId\": \"Invalid identifier supplied\",\n  \"noObject\": \"No object found\"\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVycm9yU2VydmljZS5qcyJdLCJuYW1lcyI6WyJFcnJvciIsIm1lc3NhZ2UiLCJjb2RlIiwiZXJyb3JPYmplY3QiLCJyZXR1cm5PYmoiLCJlcnJvciIsImtleSIsImhhc093blByb3BlcnR5IiwiZXhwcmVzc0Vycm9yIiwicmVxIiwicmVzIiwic3RhdHVzIiwianNvbiIsInRvSnNvbiIsImNyZWF0ZUVycm9yIiwiZXJyb3JNZXNzYWdlcyJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztJQUFhQSxLLFdBQUFBLEs7QUFDWDs7Ozs7QUFLQSxtQkFBcUU7QUFBQSxRQUF6REMsT0FBeUQsdUVBQS9DLGVBQStDO0FBQUEsUUFBOUJDLElBQThCLHVFQUF2QixHQUF1QjtBQUFBLFFBQWxCQyxXQUFrQix1RUFBSixFQUFJOztBQUFBOztBQUNuRSxTQUFLRixPQUFMLEdBQWVBLE9BQWY7QUFDQSxTQUFLQyxJQUFMLEdBQVlBLElBQVo7QUFDQSxTQUFLQyxXQUFMLEdBQW1CQSxXQUFuQjtBQUNEOzs7OzZCQUVRO0FBQ1AsVUFBSUMsWUFBWSxFQUFFQyxPQUFPLEVBQUVILE1BQU0sS0FBS0EsSUFBYixFQUFtQkQsU0FBUyxLQUFLQSxPQUFqQyxFQUFULEVBQWhCOztBQUVBLFdBQUssSUFBSUssR0FBVCxJQUFnQixLQUFLSCxXQUFyQixFQUFrQztBQUNoQyxZQUFJLEtBQUtBLFdBQUwsQ0FBaUJJLGNBQWpCLENBQWdDRCxHQUFoQyxDQUFKLEVBQTBDO0FBQ3hDRixvQkFBVUQsV0FBVixHQUF3QixLQUFLQSxXQUE3QjtBQUNEO0FBQ0Y7O0FBRUQsYUFBT0MsU0FBUDtBQUNEOzs7Ozs7QUFHSDs7Ozs7Ozs7QUFNTyxJQUFNSSxzQ0FBZSxTQUFmQSxZQUFlLENBQUNDLEdBQUQsRUFBTUMsR0FBTixFQUFXTCxLQUFYLEVBQXFCO0FBQy9DLE1BQUksRUFBRUEsaUJBQWlCTCxLQUFuQixDQUFKLEVBQStCO0FBQzdCSyxZQUFRLElBQUlMLEtBQUosRUFBUjtBQUNEO0FBQ0RVLE1BQUlDLE1BQUosQ0FBV04sTUFBTUgsSUFBakI7QUFDQVEsTUFBSUUsSUFBSixDQUFTUCxNQUFNUSxNQUFOLEVBQVQ7QUFDRCxDQU5NOztBQVFQOzs7Ozs7QUFNTyxJQUFNQyxvQ0FBYyxTQUFkQSxXQUFjLEdBSXRCO0FBQUEsTUFISGIsT0FHRyx1RUFITyxlQUdQO0FBQUEsTUFGSEMsSUFFRyx1RUFGSSxHQUVKO0FBQUEsTUFESEMsV0FDRyx1RUFEVyxFQUNYOztBQUNILFNBQU8sSUFBSUgsS0FBSixDQUFVQyxPQUFWLEVBQW1CQyxJQUFuQixFQUF5QkMsV0FBekIsQ0FBUDtBQUNELENBTk07O0FBU0EsSUFBTVksd0NBQWdCO0FBQzNCLGVBQWEsdUJBRGM7QUFFM0IsZUFBYSw2QkFGYztBQUczQixjQUFZO0FBSGUsQ0FBdEIiLCJmaWxlIjoiZXJyb3JTZXJ2aWNlLmpzIiwic291cmNlUm9vdCI6Ii9hcHAvc2VydmljZXMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY2xhc3MgRXJyb3Ige1xuICAvKipcbiAgICpcbiAgICogQHBhcmFtIHtzdHJpbmd9IG1lc3NhZ2UgbWVzc2FnZSBvZiB0aGUgZXJyb3JcbiAgICogQHBhcmFtIHtpbnR9IGNvZGUgaHR0cCBlcnJvciBjb2RlXG4gICAqL1xuICBjb25zdHJ1Y3RvcihtZXNzYWdlID0gXCJHZW5lcmljIGVycm9yXCIsIGNvZGUgPSA1MDAsIGVycm9yT2JqZWN0ID0ge30pIHtcbiAgICB0aGlzLm1lc3NhZ2UgPSBtZXNzYWdlO1xuICAgIHRoaXMuY29kZSA9IGNvZGU7XG4gICAgdGhpcy5lcnJvck9iamVjdCA9IGVycm9yT2JqZWN0O1xuICB9XG5cbiAgdG9Kc29uKCkge1xuICAgIGxldCByZXR1cm5PYmogPSB7IGVycm9yOiB7IGNvZGU6IHRoaXMuY29kZSwgbWVzc2FnZTogdGhpcy5tZXNzYWdlIH0gfTtcblxuICAgIGZvciAodmFyIGtleSBpbiB0aGlzLmVycm9yT2JqZWN0KSB7XG4gICAgICBpZiAodGhpcy5lcnJvck9iamVjdC5oYXNPd25Qcm9wZXJ0eShrZXkpKSB7XG4gICAgICAgIHJldHVybk9iai5lcnJvck9iamVjdCA9IHRoaXMuZXJyb3JPYmplY3Q7XG4gICAgICB9XG4gICAgfVxuXG4gICAgcmV0dXJuIHJldHVybk9iajtcbiAgfVxufVxuXG4vKipcbiAqIHNlbmQgYW4gZXhwcmVzcyBlcnJvclxuICogQHBhcmFtIHsqfSByZXFcbiAqIEBwYXJhbSB7Kn0gcmVzXG4gKiBAcGFyYW0geyp9IGVycm9yXG4gKi9cbmV4cG9ydCBjb25zdCBleHByZXNzRXJyb3IgPSAocmVxLCByZXMsIGVycm9yKSA9PiB7XG4gIGlmICghKGVycm9yIGluc3RhbmNlb2YgRXJyb3IpKSB7XG4gICAgZXJyb3IgPSBuZXcgRXJyb3IoKTtcbiAgfVxuICByZXMuc3RhdHVzKGVycm9yLmNvZGUpO1xuICByZXMuanNvbihlcnJvci50b0pzb24oKSk7XG59O1xuXG4vKipcbiAqIHJldHVybnMgYSBuZXcgZXJyb3Igb2JqZWN0XG4gKiBAcGFyYW0geyp9IG1lc3NhZ2VcbiAqIEBwYXJhbSB7Kn0gY29kZSBodHRwIHN0YXR1cyBjb2RlXG4gKiBAcGFyYW0geyp9IGVycm9yT2JqZWN0IGFueSBleHRyYSBlcnJvciBpbmZvXG4gKi9cbmV4cG9ydCBjb25zdCBjcmVhdGVFcnJvciA9IChcbiAgbWVzc2FnZSA9IFwiR2VuZXJpYyBlcnJvclwiLFxuICBjb2RlID0gNDA0LFxuICBlcnJvck9iamVjdCA9IHt9XG4pID0+IHtcbiAgcmV0dXJuIG5ldyBFcnJvcihtZXNzYWdlLCBjb2RlLCBlcnJvck9iamVjdCk7XG59O1xuXG5cbmV4cG9ydCBjb25zdCBlcnJvck1lc3NhZ2VzID0ge1xuICBcInNvbWV0aGluZ1wiOiBcIlNvbWV0aGluZyB3ZW50IHdyb25nLlwiLFxuICBcImludmFsaWRJZFwiOiBcIkludmFsaWQgaWRlbnRpZmllciBzdXBwbGllZFwiLFxuICBcIm5vT2JqZWN0XCI6IFwiTm8gb2JqZWN0IGZvdW5kXCJcbn1cbiJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "errorService.js"
+      ],
+      "names": [
+        "Error",
+        "message",
+        "code",
+        "errorObject",
+        "returnObj",
+        "error",
+        "key",
+        "hasOwnProperty",
+        "expressError",
+        "req",
+        "res",
+        "status",
+        "json",
+        "toJson",
+        "createError",
+        "errorMessages"
+      ],
+      "mappings": ";;;;;;;;;;IAAaA,K,WAAAA,K;AACX;;;;;AAKA,mBAAqE;AAAA,QAAzDC,OAAyD,uEAA/C,eAA+C;AAAA,QAA9BC,IAA8B,uEAAvB,GAAuB;AAAA,QAAlBC,WAAkB,uEAAJ,EAAI;;AAAA;;AACnE,SAAKF,OAAL,GAAeA,OAAf;AACA,SAAKC,IAAL,GAAYA,IAAZ;AACA,SAAKC,WAAL,GAAmBA,WAAnB;AACD;;;;6BAEQ;AACP,UAAIC,YAAY,EAAEC,OAAO,EAAEH,MAAM,KAAKA,IAAb,EAAmBD,SAAS,KAAKA,OAAjC,EAAT,EAAhB;;AAEA,WAAK,IAAIK,GAAT,IAAgB,KAAKH,WAArB,EAAkC;AAChC,YAAI,KAAKA,WAAL,CAAiBI,cAAjB,CAAgCD,GAAhC,CAAJ,EAA0C;AACxCF,oBAAUD,WAAV,GAAwB,KAAKA,WAA7B;AACD;AACF;;AAED,aAAOC,SAAP;AACD;;;;;;AAGH;;;;;;;;AAMO,IAAMI,sCAAe,SAAfA,YAAe,CAACC,GAAD,EAAMC,GAAN,EAAWL,KAAX,EAAqB;AAC/C,MAAI,EAAEA,iBAAiBL,KAAnB,CAAJ,EAA+B;AAC7BK,YAAQ,IAAIL,KAAJ,EAAR;AACD;AACDU,MAAIC,MAAJ,CAAWN,MAAMH,IAAjB;AACAQ,MAAIE,IAAJ,CAASP,MAAMQ,MAAN,EAAT;AACD,CANM;;AAQP;;;;;;AAMO,IAAMC,oCAAc,SAAdA,WAAc,GAItB;AAAA,MAHHb,OAGG,uEAHO,eAGP;AAAA,MAFHC,IAEG,uEAFI,GAEJ;AAAA,MADHC,WACG,uEADW,EACX;;AACH,SAAO,IAAIH,KAAJ,CAAUC,OAAV,EAAmBC,IAAnB,EAAyBC,WAAzB,CAAP;AACD,CANM;;AASA,IAAMY,wCAAgB;AAC3B,eAAa,uBADc;AAE3B,eAAa,6BAFc;AAG3B,cAAY;AAHe,CAAtB",
+      "file": "errorService.js",
+      "sourceRoot": "/app/services",
+      "sourcesContent": [
+        "export class Error {\n  /**\n   *\n   * @param {string} message message of the error\n   * @param {int} code http error code\n   */\n  constructor(message = \"Generic error\", code = 500, errorObject = {}) {\n    this.message = message;\n    this.code = code;\n    this.errorObject = errorObject;\n  }\n\n  toJson() {\n    let returnObj = { error: { code: this.code, message: this.message } };\n\n    for (var key in this.errorObject) {\n      if (this.errorObject.hasOwnProperty(key)) {\n        returnObj.errorObject = this.errorObject;\n      }\n    }\n\n    return returnObj;\n  }\n}\n\n/**\n * send an express error\n * @param {*} req\n * @param {*} res\n * @param {*} error\n */\nexport const expressError = (req, res, error) => {\n  if (!(error instanceof Error)) {\n    error = new Error();\n  }\n  res.status(error.code);\n  res.json(error.toJson());\n};\n\n/**\n * returns a new error object\n * @param {*} message\n * @param {*} code http status code\n * @param {*} errorObject any extra error info\n */\nexport const createError = (\n  message = \"Generic error\",\n  code = 404,\n  errorObject = {}\n) => {\n  return new Error(message, code, errorObject);\n};\n\n\nexport const errorMessages = {\n  \"something\": \"Something went wrong.\",\n  \"invalidId\": \"Invalid identifier supplied\",\n  \"noObject\": \"No object found\"\n}\n"
+      ]
+    },
+    "mtime": 1521809491393
+  },
+  "{\"filename\":\"/app/services/dashboardService.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/services\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "./../models",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "models"
+              }
+            ]
+          },
+          {
+            "source": "./errorService",
+            "imported": [
+              "createError",
+              "errorMessages"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "createError",
+                "local": "createError"
+              },
+              {
+                "kind": "named",
+                "imported": "errorMessages",
+                "local": "errorMessages"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [
+            "getDashboards",
+            "addDashboard",
+            "getDashboardById"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "getDashboards",
+              "exported": "getDashboards"
+            },
+            {
+              "kind": "local",
+              "local": "addDashboard",
+              "exported": "addDashboard"
+            },
+            {
+              "kind": "local",
+              "local": "getDashboardById",
+              "exported": "getDashboardById"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/services/dashboardService.js",
+      "filenameRelative": "/app/services/dashboardService.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "dashboardService.js",
+      "sourceFileName": "dashboardService.js",
+      "sourceRoot": "/app/services",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/services",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "dashboardService"
+    },
+    "ignored": false,
+    "code": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.getDashboardById = exports.addDashboard = exports.getDashboards = undefined;\n\nvar _models = require(\"./../models\");\n\nvar _models2 = _interopRequireDefault(_models);\n\nvar _errorService = require(\"./errorService\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n/** Returns all dashboards from the database */\nvar getDashboards = exports.getDashboards = function getDashboards() {\n  return new Promise(function (resolve, reject) {\n    _models2.default.Dashboard.findAll().then(function (models) {\n      resolve(models);\n    }).catch(function (err) {\n      reject((0, _errorService.createError)(_errorService.errorMessages.something, 500, err));\n    });\n  });\n};\n\n/**\n * add a dashboard to the database\n * @param {any} obj request body\n */\nvar addDashboard = exports.addDashboard = function addDashboard(obj) {\n  return new Promise(function (resolve, reject) {\n    _models2.default.Dashboard.create(obj).then(function (result) {\n      resolve(result);\n    }).catch(function (err) {\n      reject((0, _errorService.createError)(_errorService.errorMessages.something, 500, err));\n    });\n  });\n};\n\n/**\n * return dashboard by id\n * @param {int} id\n */\nvar getDashboardById = exports.getDashboardById = function getDashboardById(id) {\n  return new Promise(function (resolve, reject) {\n    if (!isNaN(parseInt(id))) {\n      _models2.default.Dashboard.findById(id).then(function (model) {\n        if (model != null) {\n          resolve(model);\n        } else {\n          reject(new Error(_errorService.errorMessages.noObject, 404));\n        }\n      }).catch(function (err) {\n        return reject((0, _errorService.createError)(_errorService.errorMessages.something, 500, err));\n      });\n    } else {\n      reject((0, _errorService.createError)(_errorService.errorMessages.invalidId, 404));\n    }\n  });\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRhc2hib2FyZFNlcnZpY2UuanMiXSwibmFtZXMiOlsiZ2V0RGFzaGJvYXJkcyIsIlByb21pc2UiLCJyZXNvbHZlIiwicmVqZWN0IiwiRGFzaGJvYXJkIiwiZmluZEFsbCIsInRoZW4iLCJtb2RlbHMiLCJjYXRjaCIsInNvbWV0aGluZyIsImVyciIsImFkZERhc2hib2FyZCIsImNyZWF0ZSIsIm9iaiIsInJlc3VsdCIsImdldERhc2hib2FyZEJ5SWQiLCJpc05hTiIsInBhcnNlSW50IiwiaWQiLCJmaW5kQnlJZCIsIm1vZGVsIiwiRXJyb3IiLCJub09iamVjdCIsImludmFsaWRJZCJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBOzs7O0FBQ0E7Ozs7QUFFQTtBQUNPLElBQU1BLHdDQUFnQixTQUFoQkEsYUFBZ0IsR0FBTTtBQUNqQyxTQUFPLElBQUlDLE9BQUosQ0FBWSxVQUFDQyxPQUFELEVBQVVDLE1BQVYsRUFBcUI7QUFDdEMscUJBQU9DLFNBQVAsQ0FBaUJDLE9BQWpCLEdBQ0dDLElBREgsQ0FDUSxrQkFBVTtBQUNkSixjQUFRSyxNQUFSO0FBQ0QsS0FISCxFQUlHQyxLQUpILENBSVMsZUFBTztBQUNaTCxhQUFPLCtCQUFZLDRCQUFjTSxTQUExQixFQUFxQyxHQUFyQyxFQUEwQ0MsR0FBMUMsQ0FBUDtBQUNELEtBTkg7QUFPRCxHQVJNLENBQVA7QUFTRCxDQVZNOztBQVlQOzs7O0FBSU8sSUFBTUMsc0NBQWUsU0FBZkEsWUFBZSxNQUFPO0FBQ2pDLFNBQU8sSUFBSVYsT0FBSixDQUFZLFVBQUNDLE9BQUQsRUFBVUMsTUFBVixFQUFxQjtBQUN0QyxxQkFBT0MsU0FBUCxDQUFpQlEsTUFBakIsQ0FBd0JDLEdBQXhCLEVBQ0dQLElBREgsQ0FDUSxrQkFBVTtBQUNkSixjQUFRWSxNQUFSO0FBQ0QsS0FISCxFQUlHTixLQUpILENBSVMsZUFBTztBQUNaTCxhQUFPLCtCQUFZLDRCQUFjTSxTQUExQixFQUFxQyxHQUFyQyxFQUEwQ0MsR0FBMUMsQ0FBUDtBQUNELEtBTkg7QUFPRCxHQVJNLENBQVA7QUFTRCxDQVZNOztBQVlQOzs7O0FBSU8sSUFBTUssOENBQW1CLFNBQW5CQSxnQkFBbUIsS0FBTTtBQUNwQyxTQUFPLElBQUlkLE9BQUosQ0FBWSxVQUFDQyxPQUFELEVBQVVDLE1BQVYsRUFBcUI7QUFDdEMsUUFBSSxDQUFDYSxNQUFNQyxTQUFTQyxFQUFULENBQU4sQ0FBTCxFQUEwQjtBQUN4Qix1QkFBT2QsU0FBUCxDQUFpQmUsUUFBakIsQ0FBMEJELEVBQTFCLEVBQ0daLElBREgsQ0FDUSxpQkFBUztBQUNiLFlBQUljLFNBQVMsSUFBYixFQUFtQjtBQUNqQmxCLGtCQUFRa0IsS0FBUjtBQUNELFNBRkQsTUFFTztBQUNMakIsaUJBQU8sSUFBSWtCLEtBQUosQ0FBVSw0QkFBY0MsUUFBeEIsRUFBa0MsR0FBbEMsQ0FBUDtBQUNEO0FBQ0YsT0FQSCxFQVFHZCxLQVJILENBUVM7QUFBQSxlQUFPTCxPQUFPLCtCQUFZLDRCQUFjTSxTQUExQixFQUFxQyxHQUFyQyxFQUEwQ0MsR0FBMUMsQ0FBUCxDQUFQO0FBQUEsT0FSVDtBQVNELEtBVkQsTUFVTztBQUNMUCxhQUFPLCtCQUFZLDRCQUFjb0IsU0FBMUIsRUFBcUMsR0FBckMsQ0FBUDtBQUNEO0FBQ0YsR0FkTSxDQUFQO0FBZUQsQ0FoQk0iLCJmaWxlIjoiZGFzaGJvYXJkU2VydmljZS5qcyIsInNvdXJjZVJvb3QiOiIvYXBwL3NlcnZpY2VzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IG1vZGVscyBmcm9tIFwiLi8uLi9tb2RlbHNcIjtcbmltcG9ydCB7IGNyZWF0ZUVycm9yLCBlcnJvck1lc3NhZ2VzIH0gZnJvbSBcIi4vZXJyb3JTZXJ2aWNlXCI7XG5cbi8qKiBSZXR1cm5zIGFsbCBkYXNoYm9hcmRzIGZyb20gdGhlIGRhdGFiYXNlICovXG5leHBvcnQgY29uc3QgZ2V0RGFzaGJvYXJkcyA9ICgpID0+IHtcbiAgcmV0dXJuIG5ldyBQcm9taXNlKChyZXNvbHZlLCByZWplY3QpID0+IHtcbiAgICBtb2RlbHMuRGFzaGJvYXJkLmZpbmRBbGwoKVxuICAgICAgLnRoZW4obW9kZWxzID0+IHtcbiAgICAgICAgcmVzb2x2ZShtb2RlbHMpO1xuICAgICAgfSlcbiAgICAgIC5jYXRjaChlcnIgPT4ge1xuICAgICAgICByZWplY3QoY3JlYXRlRXJyb3IoZXJyb3JNZXNzYWdlcy5zb21ldGhpbmcsIDUwMCwgZXJyKSk7XG4gICAgICB9KTtcbiAgfSk7XG59O1xuXG4vKipcbiAqIGFkZCBhIGRhc2hib2FyZCB0byB0aGUgZGF0YWJhc2VcbiAqIEBwYXJhbSB7YW55fSBvYmogcmVxdWVzdCBib2R5XG4gKi9cbmV4cG9ydCBjb25zdCBhZGREYXNoYm9hcmQgPSBvYmogPT4ge1xuICByZXR1cm4gbmV3IFByb21pc2UoKHJlc29sdmUsIHJlamVjdCkgPT4ge1xuICAgIG1vZGVscy5EYXNoYm9hcmQuY3JlYXRlKG9iailcbiAgICAgIC50aGVuKHJlc3VsdCA9PiB7XG4gICAgICAgIHJlc29sdmUocmVzdWx0KTtcbiAgICAgIH0pXG4gICAgICAuY2F0Y2goZXJyID0+IHtcbiAgICAgICAgcmVqZWN0KGNyZWF0ZUVycm9yKGVycm9yTWVzc2FnZXMuc29tZXRoaW5nLCA1MDAsIGVycikpO1xuICAgICAgfSk7XG4gIH0pO1xufTtcblxuLyoqXG4gKiByZXR1cm4gZGFzaGJvYXJkIGJ5IGlkXG4gKiBAcGFyYW0ge2ludH0gaWRcbiAqL1xuZXhwb3J0IGNvbnN0IGdldERhc2hib2FyZEJ5SWQgPSBpZCA9PiB7XG4gIHJldHVybiBuZXcgUHJvbWlzZSgocmVzb2x2ZSwgcmVqZWN0KSA9PiB7XG4gICAgaWYgKCFpc05hTihwYXJzZUludChpZCkpKSB7XG4gICAgICBtb2RlbHMuRGFzaGJvYXJkLmZpbmRCeUlkKGlkKVxuICAgICAgICAudGhlbihtb2RlbCA9PiB7XG4gICAgICAgICAgaWYgKG1vZGVsICE9IG51bGwpIHtcbiAgICAgICAgICAgIHJlc29sdmUobW9kZWwpO1xuICAgICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgICByZWplY3QobmV3IEVycm9yKGVycm9yTWVzc2FnZXMubm9PYmplY3QsIDQwNCkpO1xuICAgICAgICAgIH1cbiAgICAgICAgfSlcbiAgICAgICAgLmNhdGNoKGVyciA9PiByZWplY3QoY3JlYXRlRXJyb3IoZXJyb3JNZXNzYWdlcy5zb21ldGhpbmcsIDUwMCwgZXJyKSkpO1xuICAgIH0gZWxzZSB7XG4gICAgICByZWplY3QoY3JlYXRlRXJyb3IoZXJyb3JNZXNzYWdlcy5pbnZhbGlkSWQsIDQwNCkpO1xuICAgIH1cbiAgfSk7XG59O1xuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "dashboardService.js"
+      ],
+      "names": [
+        "getDashboards",
+        "Promise",
+        "resolve",
+        "reject",
+        "Dashboard",
+        "findAll",
+        "then",
+        "models",
+        "catch",
+        "something",
+        "err",
+        "addDashboard",
+        "create",
+        "obj",
+        "result",
+        "getDashboardById",
+        "isNaN",
+        "parseInt",
+        "id",
+        "findById",
+        "model",
+        "Error",
+        "noObject",
+        "invalidId"
+      ],
+      "mappings": ";;;;;;;AAAA;;;;AACA;;;;AAEA;AACO,IAAMA,wCAAgB,SAAhBA,aAAgB,GAAM;AACjC,SAAO,IAAIC,OAAJ,CAAY,UAACC,OAAD,EAAUC,MAAV,EAAqB;AACtC,qBAAOC,SAAP,CAAiBC,OAAjB,GACGC,IADH,CACQ,kBAAU;AACdJ,cAAQK,MAAR;AACD,KAHH,EAIGC,KAJH,CAIS,eAAO;AACZL,aAAO,+BAAY,4BAAcM,SAA1B,EAAqC,GAArC,EAA0CC,GAA1C,CAAP;AACD,KANH;AAOD,GARM,CAAP;AASD,CAVM;;AAYP;;;;AAIO,IAAMC,sCAAe,SAAfA,YAAe,MAAO;AACjC,SAAO,IAAIV,OAAJ,CAAY,UAACC,OAAD,EAAUC,MAAV,EAAqB;AACtC,qBAAOC,SAAP,CAAiBQ,MAAjB,CAAwBC,GAAxB,EACGP,IADH,CACQ,kBAAU;AACdJ,cAAQY,MAAR;AACD,KAHH,EAIGN,KAJH,CAIS,eAAO;AACZL,aAAO,+BAAY,4BAAcM,SAA1B,EAAqC,GAArC,EAA0CC,GAA1C,CAAP;AACD,KANH;AAOD,GARM,CAAP;AASD,CAVM;;AAYP;;;;AAIO,IAAMK,8CAAmB,SAAnBA,gBAAmB,KAAM;AACpC,SAAO,IAAId,OAAJ,CAAY,UAACC,OAAD,EAAUC,MAAV,EAAqB;AACtC,QAAI,CAACa,MAAMC,SAASC,EAAT,CAAN,CAAL,EAA0B;AACxB,uBAAOd,SAAP,CAAiBe,QAAjB,CAA0BD,EAA1B,EACGZ,IADH,CACQ,iBAAS;AACb,YAAIc,SAAS,IAAb,EAAmB;AACjBlB,kBAAQkB,KAAR;AACD,SAFD,MAEO;AACLjB,iBAAO,IAAIkB,KAAJ,CAAU,4BAAcC,QAAxB,EAAkC,GAAlC,CAAP;AACD;AACF,OAPH,EAQGd,KARH,CAQS;AAAA,eAAOL,OAAO,+BAAY,4BAAcM,SAA1B,EAAqC,GAArC,EAA0CC,GAA1C,CAAP,CAAP;AAAA,OART;AASD,KAVD,MAUO;AACLP,aAAO,+BAAY,4BAAcoB,SAA1B,EAAqC,GAArC,CAAP;AACD;AACF,GAdM,CAAP;AAeD,CAhBM",
+      "file": "dashboardService.js",
+      "sourceRoot": "/app/services",
+      "sourcesContent": [
+        "import models from \"./../models\";\nimport { createError, errorMessages } from \"./errorService\";\n\n/** Returns all dashboards from the database */\nexport const getDashboards = () => {\n  return new Promise((resolve, reject) => {\n    models.Dashboard.findAll()\n      .then(models => {\n        resolve(models);\n      })\n      .catch(err => {\n        reject(createError(errorMessages.something, 500, err));\n      });\n  });\n};\n\n/**\n * add a dashboard to the database\n * @param {any} obj request body\n */\nexport const addDashboard = obj => {\n  return new Promise((resolve, reject) => {\n    models.Dashboard.create(obj)\n      .then(result => {\n        resolve(result);\n      })\n      .catch(err => {\n        reject(createError(errorMessages.something, 500, err));\n      });\n  });\n};\n\n/**\n * return dashboard by id\n * @param {int} id\n */\nexport const getDashboardById = id => {\n  return new Promise((resolve, reject) => {\n    if (!isNaN(parseInt(id))) {\n      models.Dashboard.findById(id)\n        .then(model => {\n          if (model != null) {\n            resolve(model);\n          } else {\n            reject(new Error(errorMessages.noObject, 404));\n          }\n        })\n        .catch(err => reject(createError(errorMessages.something, 500, err)));\n    } else {\n      reject(createError(errorMessages.invalidId, 404));\n    }\n  });\n};\n"
+      ]
+    },
+    "mtime": 1521809729869
+  }
+}

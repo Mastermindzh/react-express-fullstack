@@ -1,0 +1,3 @@
+export const COLOR_ACTION_TYPES = {
+  CHANGE_COLOR: 'CHANGE_COLOR'
+};

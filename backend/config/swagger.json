@@ -1,0 +1,135 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Dynamic dashboard adapter",
+    "version": "0.0.1",
+    "title": "Dynamic dashboard",
+    "termsOfService": "",
+    "contact": {
+      "email": "info@rickvanlieshout.com"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://choosealicense.com/licenses/mit/"
+    }
+  },
+  "host": "localhost",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "tags": [
+    {
+      "name": "dashboards",
+      "description": "Everything about the dashboards"
+    }
+  ],
+  "paths": {
+    "/dashboards/": {
+      "get": {
+        "tags": [
+          "dashboards"
+        ],
+        "summary": "Get all dashboards",
+        "description": "Get all dashboards",
+        "operationId": "getDashboards",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "dashboards fetched",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Dashboard"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "dashboards"
+        ],
+        "summary": "Add a new dashboard",
+        "description": "Add a new dashboard",
+        "operationId": "addDashboard",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Dashboard object that needs to be added to the store",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Dashboard"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "dashboard added"
+          }
+        }
+      }
+    },
+    "/dashboards/{id}": {
+      "get": {
+        "tags": [
+          "dashboards"
+        ],
+        "summary": "Get a specific dashboards by id",
+        "description": "Get a specific dashboards by id",
+        "operationId": "getDashboardById",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id of the dashboards you want",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "dashboards fetched",
+            "schema": {
+              "$ref": "#/definitions/Dashboard"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Dashboard": {
+      "type": "object",
+      "description": "Dashboard object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "readOnly": true
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Developed for ...",
+    "url": "https://google.com"
+  }
+}

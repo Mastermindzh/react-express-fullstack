@@ -1,0 +1,188 @@
+{
+  "name": "react-sane-starter",
+  "version": "0.1.0",
+  "description": "Sane starting template for React developers",
+  "engines": {
+    "npm": ">=3"
+  },
+  "scripts": {
+    "preinstall": "node tools/nodeVersionCheck.js",
+    "postinstall": "npm run docker-build-dev",
+    "prestart": "babel-node tools/startMessage.js",
+    "start": "concurrently -k -r -s first \"npm run test-watch\" \"npm run open-src\" \"npm run lint-watch\"",
+    "prebuild": "npm run lint && npm run test && npm run clean-dist",
+    "build": "babel-node tools/build.js",
+    "docker-run-dev": "npm run docker-build-dev && docker-compose -f docker/dev/docker-compose.yml up",
+    "docker-run-prod": "npm run build && npm run docker-build-prod && docker-compose -f docker/prod/docker-compose.yml up",
+    "docker-fix": "docker-compose -f docker/dev/docker-compose.yml down && docker-compose -f docker/prod/docker-compose.yml down",
+    "docker-build-dev": "docker build -t project/node-dev -f docker/dev/Dockerfile docker/dev",
+    "docker-build-prod": "docker build -t project/nginx-react -f docker/prod/Dockerfile docker/prod",
+    "open-src": "babel-node tools/srcServer.js",
+    "lint": "esw webpack.config.* src tools --color",
+    "lint-watch": "npm run lint -- --watch",
+    "clean-dist": "npm run remove-dist && mkdir dist",
+    "remove-dist": "rimraf ./dist",
+    "test": "jest",
+    "test-ci": "babel-node tools/testCi.js",
+    "test-cover": "jest --coverage ",
+    "test-cover-ci": "npm run test-ci -- --coverage && cat ./coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
+    "test-watch": "jest --watch",
+    "open-cover": "npm run test-cover && opn ./coverage/lcov-report/index.html",
+    "analyze-bundle": "babel-node ./tools/analyzeBundle.js"
+  },
+  "author": "Rick van Lieshout",
+  "license": "MIT",
+  "dependencies": {
+    "object-assign": "4.1.0",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "react-redux": "5.0.5",
+    "react-router-dom": "4.2.2",
+    "react-router-redux": "5.0.0-alpha.6",
+    "redux": "3.6.0",
+    "redux-thunk": "2.1.0",
+    "rmwc": "^1.3.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "7.1.4",
+    "babel-cli": "6.24.1",
+    "babel-core": "6.25.0",
+    "babel-eslint": "7.2.3",
+    "babel-jest": "20.0.3",
+    "babel-loader": "7.1.1",
+    "babel-plugin-transform-react-constant-elements": "6.23.0",
+    "babel-plugin-transform-react-remove-prop-types": "0.4.6",
+    "babel-polyfill": "6.23.0",
+    "babel-preset-env": "1.6.0",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-react-hmre": "1.1.1",
+    "babel-preset-stage-1": "6.24.1",
+    "browser-sync": "2.18.12",
+    "chalk": "2.0.1",
+    "concurrently": "3.5.0",
+    "connect-history-api-fallback": "1.3.0",
+    "coveralls": "2.13.1",
+    "css-loader": "0.28.7",
+    "enzyme": "3.0.0",
+    "enzyme-adapter-react-16": "1.0.0",
+    "eslint": "4.2.0",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-react": "7.3.0",
+    "eslint-watch": "3.1.2",
+    "extract-text-webpack-plugin": "3.0.1",
+    "file-loader": "0.11.2",
+    "history": "4.6.0",
+    "html-webpack-plugin": "2.29.0",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "20.0.4",
+    "jest-cli": "20.0.4",
+    "json-loader": "0.5.4",
+    "mockdate": "2.0.1",
+    "node": "8.9.4",
+    "node-sass": "4.5.3",
+    "opn-cli": "3.1.0",
+    "postcss-loader": "2.0.6",
+    "prompt": "1.0.0",
+    "prop-types": "15.5.10",
+    "raf": "3.3.2",
+    "react-hot-loader": "3.0.0-beta.6",
+    "react-test-renderer": "16.0.0",
+    "redux-immutable-state-invariant": "2.0.0",
+    "redux-mock-store": "1.3.0",
+    "replace": "0.3.0",
+    "rimraf": "2.6.1",
+    "sass-loader": "6.0.6",
+    "style-loader": "0.19.0",
+    "url-loader": "0.5.9",
+    "webpack": "3.1.0",
+    "webpack-bundle-analyzer": "2.8.2",
+    "webpack-dev-middleware": "1.11.0",
+    "webpack-hot-middleware": "2.18.2",
+    "webpack-md5-hash": "0.0.5"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mastermindzh/react-sane-starter"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|ico)$": "<rootDir>/tools/assetsTransformer.js",
+      "\\.(css)$": "<rootDir>/tools/assetsTransformer.js"
+    },
+    "setupFiles": [
+      "raf/polyfill",
+      "./tools/enzymeTestAdapterSetup.js"
+    ]
+  },
+  "babel": {
+    "env": {
+      "development": {
+        "presets": [
+          "env",
+          "react",
+          "react-hmre",
+          "stage-1"
+        ]
+      },
+      "production": {
+        "presets": [
+          [
+            "env",
+            {
+              "es2015": {
+                "modules": false
+              },
+              "targets": {
+                "ie": 9,
+                "uglify": true
+              }
+            }
+          ],
+          "react",
+          "stage-1"
+        ],
+        "plugins": [
+          "transform-react-constant-elements",
+          "transform-react-remove-prop-types"
+        ]
+      },
+      "test": {
+        "presets": [
+          "env",
+          "react",
+          "stage-1"
+        ]
+      }
+    }
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "eslint:recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:react/recommended"
+    ],
+    "plugins": [
+      "react"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true,
+        "experimentalObjectRestSpread": true
+      }
+    },
+    "env": {
+      "es6": true,
+      "browser": true,
+      "node": true,
+      "jquery": true,
+      "jest": true
+    },
+    "globals": {}
+  }
+}

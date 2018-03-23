@@ -1,0 +1,12 @@
+version: "2"
+services:
+
+  frontend-builder:
+    build: .
+    volumes:
+      - ./../../../frontend/:/app
+
+  sphinx-builder:
+    build: .
+    volumes:
+      - ./../../../documentation/:/app
