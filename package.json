@@ -17,9 +17,8 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Mastermindzh/react-express-fullstack"
   },
   "author": "Rick van Lieshout",
-  "license": "ISC",
-  "dependencies": {}
+  "license": "MIT"
 }
