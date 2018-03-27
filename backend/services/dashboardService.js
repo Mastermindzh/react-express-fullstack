@@ -42,7 +42,7 @@ export const getDashboardById = id => {
           if (model != null) {
             resolve(model);
           } else {
-            reject(new Error(errorMessages.noObject, 404));
+            reject(createError(errorMessages.noObject, 404));
           }
         })
         .catch(err => reject(createError(errorMessages.something, 500, err)));

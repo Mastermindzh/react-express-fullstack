@@ -18,7 +18,7 @@ module.exports = {
     200: function(req, res) {
       getDashboards()
         .then(result => res.json(result))
-        .catch(err => expressError(err));
+        .catch(err => expressError(req,res,err));
     }
   },
   /**
@@ -35,7 +35,7 @@ module.exports = {
       delete req.body["id"];
       addDashboard(req.body)
         .then(result => res.json(result))
-        .catch(err => expressError(err));
+        .catch(err => expressError(req,res,err));
     }
   }
 };

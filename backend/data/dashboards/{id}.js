@@ -19,7 +19,7 @@ module.exports = {
     200: function(req, res) {
       getDashboardById(req.params.id)
         .then(result => res.json(result))
-        .catch(err => expressError(err));
+        .catch(err => expressError(req,res,err));
     }
   }
 };
